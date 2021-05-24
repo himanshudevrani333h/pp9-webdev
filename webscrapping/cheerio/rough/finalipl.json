@@ -1,0 +1,218 @@
+[
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Marcus Stoinis ",
+        "Run": "0",
+        "four": "-",
+        "Sixes": "0",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Shikhar Dhawan ",
+        "Run": "15",
+        "four": "-",
+        "Sixes": "3",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Ajinkya Rahane ",
+        "Run": "2",
+        "four": "-",
+        "Sixes": "0",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Shreyas Iyer (c)",
+        "Run": "65",
+        "four": "-",
+        "Sixes": "6",
+        "Strike Rate": "2"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Rishabh Pant †",
+        "Run": "56",
+        "four": "-",
+        "Sixes": "4",
+        "Strike Rate": "2"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Shimron Hetmyer ",
+        "Run": "5",
+        "four": "-",
+        "Sixes": "1",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Axar Patel ",
+        "Run": "9",
+        "four": "-",
+        "Sixes": "1",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Kagiso Rabada ",
+        "Run": "0",
+        "four": "-",
+        "Sixes": "0",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Rohit Sharma (c)",
+        "Run": "68",
+        "four": "-",
+        "Sixes": "5",
+        "Strike Rate": "4"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Quinton de Kock †",
+        "Run": "20",
+        "four": "-",
+        "Sixes": "3",
+        "Strike Rate": "1"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Suryakumar Yadav ",
+        "Run": "19",
+        "four": "-",
+        "Sixes": "1",
+        "Strike Rate": "1"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Ishan Kishan ",
+        "Run": "33",
+        "four": "-",
+        "Sixes": "3",
+        "Strike Rate": "1"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Kieron Pollard ",
+        "Run": "9",
+        "four": "-",
+        "Sixes": "2",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Hardik Pandya ",
+        "Run": "3",
+        "four": "-",
+        "Sixes": "0",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Mumbai Indians",
+        "batsmen name": "Krunal Pandya ",
+        "Run": "1",
+        "four": "-",
+        "Sixes": "0",
+        "Strike Rate": "0"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Trent Boult",
+        "Over": "4",
+        "Maiden": "0",
+        "RUN": "30",
+        "EConomy": "7.50"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Jasprit Bumrah",
+        "Over": "4",
+        "Maiden": "0",
+        "RUN": "28",
+        "EConomy": "7.00"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Jayant Yadav",
+        "Over": "4",
+        "Maiden": "0",
+        "RUN": "25",
+        "EConomy": "6.25"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Nathan Coulter-Nile",
+        "Over": "4",
+        "Maiden": "0",
+        "RUN": "29",
+        "EConomy": "7.25"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Krunal Pandya",
+        "Over": "3",
+        "Maiden": "0",
+        "RUN": "30",
+        "EConomy": "10.00"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Kieron Pollard",
+        "Over": "1",
+        "Maiden": "0",
+        "RUN": "13",
+        "EConomy": "13.00"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Ravichandran Ashwin",
+        "Over": "4",
+        "Maiden": "0",
+        "RUN": "28",
+        "EConomy": "7.00"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Kagiso Rabada",
+        "Over": "3",
+        "Maiden": "0",
+        "RUN": "32",
+        "EConomy": "10.66"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Anrich Nortje",
+        "Over": "2.4",
+        "Maiden": "0",
+        "RUN": "25",
+        "EConomy": "9.37"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Marcus Stoinis",
+        "Over": "2",
+        "Maiden": "0",
+        "RUN": "23",
+        "EConomy": "11.50"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Axar Patel",
+        "Over": "4",
+        "Maiden": "0",
+        "RUN": "16",
+        "EConomy": "4.00"
+    },
+    {
+        "Team Name": "Delhi Capitals",
+        "Bowler name": "Praveen Dubey",
+        "Over": "3",
+        "Maiden": "0",
+        "RUN": "29",
+        "EConomy": "9.66"
+    }
+]

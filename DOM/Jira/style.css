@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.navigation {
+    height: 10%;
+    background-color: #333333;
+    display: flex;
+}
+
+.grid {
+    background-color: #f2f2f2;
+    height: 90%;
+}
+
+.filter-container, .action-bar {
+    height: 75%;
+    margin-top: .5rem;
+    border-radius: 2px;
+    margin-left: 3.5rem;
+    background-color: #444444;
+}
+
+.filter-container {
+    width: 15rem;
+    display: flex;
+}
+
+.action-bar {
+    width: 7.5rem;
+    display: flex;
+}
+
+.filter {
+    height: 100%;
+    width: 25%;
+}
+
+.filter:hover {
+    background-color: #393939;
+}
+
+.filter div {
+    margin: auto;
+    border-radius: 2px;
+    margin-top: .85rem;
+    height: 50%;
+    width: 50%;
+}
+
+.pink-color-btn, .pink {
+    background-color: #d595aa;
+}
+
+.blue-color-btn, .blue {
+    background-color: #5ecdde;
+}
+
+.green-color-btn, .green {
+    background-color: #91e6c7;
+}
+
+.black-color-btn, .black {
+    background-color: black;
+}
+
+.add, .remove {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+}
+
+.add {
+    font-size: 3rem;
+}
+
+.remove {
+    font-size: 2.5rem;
+}
+
+.add:hover, .remove:hover {
+    background-color: #393939;
+}
+
+.modal-container {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    height: 18rem;
+    width: 35rem;
+    display: flex;
+    position: fixed;
+    top: calc((100vh - 18rem) / 2);
+    left: calc((100vw - 35rem) / 2);
+}
+
+.writing-area {
+    background-color: white;
+    height: 100%;
+    width: 70%;
+    padding: 2rem;
+    overflow: auto;
+    outline: none;
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.filter-area {
+    background-color: #444;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-area div {
+    height: 2.5rem;
+    width: 50%;
+    margin-bottom: 5px;
+    opacity: .7;
+}
+
+.filter-area div:hover {
+    opacity: 1;
+}
+
+.ticket {
+    background-color: white;
+    height: 10rem;
+    width: 18rem;
+}
+
+.ticket-color {
+    background-color: red;
+    height: .8rem;
+    width: 100%;
+    border-top-left-radius: 1.5px;
+    border-top-right-radius: 1.5px;
+}
+
+.ticket-id {
+    height: 2rem;
+    width: 100%;
+    font-size: 25px;
+    padding-left: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:  #444;
+    
+}
+
+.ticket-box {
+    padding: 2rem;
+    height: 72%;
+    width: 100%;
+    background-color: white;
+    overflow-y:auto;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+}

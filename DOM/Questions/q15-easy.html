@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <p data-test="abc">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum ea eum
+    ut? Eaque molestiae perferendis fugiat illo sunt veniam doloremque
+    voluptate recusandae, consequuntur quidem, voluptates, non quaerat soluta
+    illum.
+  </p>
+  <script>
+    // Q Write a generic function to get elements by given attribute. Using that function select the above p tag and console.log(); it
+    let select = document.querySelectorAll("*")
+    
+    function getelements(attr) {
+      let res = [];
+      for (let i = 0; i < select.length; i++) {
+
+        if (select[i].getAttribute(attr) != null) {
+          res.push(select[i])
+        }
+      }
+      return res;
+    }
+
+
+    let res = getelements('data-test');
+    for( let i =0; i<res.length; i++) console.log(res[i].innerText);
+  </script>
+</body>
+
+</html>

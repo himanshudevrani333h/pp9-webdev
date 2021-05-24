@@ -1,0 +1,860 @@
+[
+    {
+        "projectName": "Firebase",
+        "projectUrl": "https://github.com/topics/firebase",
+        "gitRepos": [
+            {
+                "repoName": "\n            functions-samples\n",
+                "repoUrl": "https://github.com/firebase/functions-samples",
+                "issues": [
+                    {
+                        "issueName": "[BUG] in vision-annotate-images: Unexpected token o in JSON at position 1 ",
+                        "issueUrl": "https://www.github.com/firebase/functions-samples/issues/850"
+                    },
+                    {
+                        "issueName": "[BUG] in sample: linkedin-auth: depends on \"node-linkedin\" library which has been broken for 2 years",
+                        "issueUrl": "https://www.github.com/firebase/functions-samples/issues/845"
+                    },
+                    {
+                        "issueName": "[BUG] in sample: linkedin-auth",
+                        "issueUrl": "https://www.github.com/firebase/functions-samples/issues/822"
+                    },
+                    {
+                        "issueName": "Invalid registration token provided. Make sure it matches the registration token the client app receives from registering with FCM.",
+                        "issueUrl": "https://www.github.com/firebase/functions-samples/issues/790"
+                    },
+                    {
+                        "issueName": "Update generate-thumbnail example because file.getSignedURL() does not work in the Cloud Functions environment",
+                        "issueUrl": "https://www.github.com/firebase/functions-samples/issues/782"
+                    },
+                    {
+                        "issueName": "New sample suggestion: Firebase + Elastic Search",
+                        "issueUrl": "https://www.github.com/firebase/functions-samples/issues/776"
+                    },
+                    {
+                        "issueName": "Stripe functions example: incorrect type handling",
+                        "issueUrl": "https://www.github.com/firebase/functions-samples/issues/773"
+                    },
+                    {
+                        "issueName": "Stripe sample addPaymentMethodDetails is missing some logic",
+                        "issueUrl": "https://www.github.com/firebase/functions-samples/issues/770"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            react-native-firebase\n",
+                "repoUrl": "https://github.com/invertase/react-native-firebase",
+                "issues": [
+                    {
+                        "issueName": "Cocoapods occasionally processes Info.plist *after* RNFB configuration",
+                        "issueUrl": "https://www.github.com/invertase/react-native-firebase/issues/5152"
+                    },
+                    {
+                        "issueName": "[🐛] Apple login - not firing",
+                        "issueUrl": "https://www.github.com/invertase/react-native-firebase/issues/5151"
+                    },
+                    {
+                        "issueName": "New firebase-ads / google-mobile-ads-sdk incompatible with v11",
+                        "issueUrl": "https://www.github.com/invertase/react-native-firebase/issues/5150"
+                    },
+                    {
+                        "issueName": "superstruct dependency is out of date / update it",
+                        "issueUrl": "https://www.github.com/invertase/react-native-firebase/issues/5146"
+                    },
+                    {
+                        "issueName": "🔥 Facing The sms code has expired. Please re-send the verification code to try again. on android and IOS device",
+                        "issueUrl": "https://www.github.com/invertase/react-native-firebase/issues/5133"
+                    },
+                    {
+                        "issueName": "[🐛] Screen name (not set)",
+                        "issueUrl": "https://www.github.com/invertase/react-native-firebase/issues/5131"
+                    },
+                    {
+                        "issueName": "[🐛] 🔥 Firebase* Swift imports not working on integrating framework depending upon Firebase itself",
+                        "issueUrl": "https://www.github.com/invertase/react-native-firebase/issues/5130"
+                    },
+                    {
+                        "issueName": "[🐛] [ADMOB] BannerAdSize.FLUID fails to display BannerAd",
+                        "issueUrl": "https://www.github.com/invertase/react-native-firebase/issues/5121"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            quickstart-android\n",
+                "repoUrl": "https://github.com/firebase/quickstart-android",
+                "issues": [
+                    {
+                        "issueName": "Jetpacktify our quickstarts ✨",
+                        "issueUrl": "https://www.github.com/firebase/quickstart-android/issues/1217"
+                    },
+                    {
+                        "issueName": "FATAL EXCEPTION: Firebase-Messaging-Intent-Handle",
+                        "issueUrl": "https://www.github.com/firebase/quickstart-android/issues/1209"
+                    },
+                    {
+                        "issueName": "FirebaseVisionImage.fromMediaImage vs fromBitmap",
+                        "issueUrl": "https://www.github.com/firebase/quickstart-android/issues/1158"
+                    },
+                    {
+                        "issueName": "Why does Firebase pendingAuthResult return null when the app is killed?",
+                        "issueUrl": "https://www.github.com/firebase/quickstart-android/issues/1045"
+                    },
+                    {
+                        "issueName": "I receive only last one message when turn on internet? ",
+                        "issueUrl": "https://www.github.com/firebase/quickstart-android/issues/1007"
+                    },
+                    {
+                        "issueName": "Problem that Firebase Push Notification play first sound in the raw folder for phones above SDK 26",
+                        "issueUrl": "https://www.github.com/firebase/quickstart-android/issues/981"
+                    },
+                    {
+                        "issueName": "NPE on FirebasePerfUrlConnection.instrument(FirebasePerfUrlConnection.java:13)",
+                        "issueUrl": "https://www.github.com/firebase/quickstart-android/issues/975"
+                    },
+                    {
+                        "issueName": "Manual tracking does not work when using Intents.",
+                        "issueUrl": "https://www.github.com/firebase/quickstart-android/issues/954"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            supabase\n",
+                "repoUrl": "https://github.com/supabase/supabase",
+                "issues": [
+                    {
+                        "issueName": "feat: Branding page, with brand assets",
+                        "issueUrl": "https://www.github.com/supabase/supabase/issues/1110"
+                    },
+                    {
+                        "issueName": "jsonb does not render properly when viewed as a relation in the sidebar",
+                        "issueUrl": "https://www.github.com/supabase/supabase/issues/1108"
+                    },
+                    {
+                        "issueName": "Monitoring & Alert/Notifications of errors/downtime",
+                        "issueUrl": "https://www.github.com/supabase/supabase/issues/1105"
+                    },
+                    {
+                        "issueName": "Order foreign key has the wrong syntax",
+                        "issueUrl": "https://www.github.com/supabase/supabase/issues/1103"
+                    },
+                    {
+                        "issueName": "When a user email address is updated, a new account is created to same provider",
+                        "issueUrl": "https://www.github.com/supabase/supabase/issues/1077"
+                    },
+                    {
+                        "issueName": "OAuth Providers array in user object",
+                        "issueUrl": "https://www.github.com/supabase/supabase/issues/1068"
+                    },
+                    {
+                        "issueName": "Disable optimistic UI on error in Supabase GUI ",
+                        "issueUrl": "https://www.github.com/supabase/supabase/issues/1051"
+                    },
+                    {
+                        "issueName": "allow whitelisting multiple domains in supabase auth",
+                        "issueUrl": "https://www.github.com/supabase/supabase/issues/1049"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            angularfire\n",
+                "repoUrl": "https://github.com/angular/angularfire",
+                "issues": [
+                    {
+                        "issueName": "The suggested firebase emulator suite integration results in increased production bundle size",
+                        "issueUrl": "https://www.github.com/angular/angularfire/issues/2797"
+                    },
+                    {
+                        "issueName": "Emulator Bug - firebase:emulator:start - Firestore Emulator has exited with code: 1",
+                        "issueUrl": "https://www.github.com/angular/angularfire/issues/2796"
+                    },
+                    {
+                        "issueName": "Storage Emulator feature request.",
+                        "issueUrl": "https://www.github.com/angular/angularfire/issues/2794"
+                    },
+                    {
+                        "issueName": "Build errors trying to import AngularFireFunctionsModule when firebase/functions folder exists",
+                        "issueUrl": "https://www.github.com/angular/angularfire/issues/2793"
+                    },
+                    {
+                        "issueName": "Error building and deploying project - ng build",
+                        "issueUrl": "https://www.github.com/angular/angularfire/issues/2785"
+                    },
+                    {
+                        "issueName": "angular universal app builds successfully, but fails with angularFire",
+                        "issueUrl": "https://www.github.com/angular/angularfire/issues/2783"
+                    },
+                    {
+                        "issueName": "wrong output path for deploy",
+                        "issueUrl": "https://www.github.com/angular/angularfire/issues/2780"
+                    },
+                    {
+                        "issueName": "deployent error with typescript",
+                        "issueUrl": "https://www.github.com/angular/angularfire/issues/2779"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            flutterfire\n",
+                "repoUrl": "https://github.com/FirebaseExtended/flutterfire",
+                "issues": [
+                    {
+                        "issueName": "[firebase_messaging] Stuck in pub get",
+                        "issueUrl": "https://www.github.com/FirebaseExtended/flutterfire/issues/5719"
+                    },
+                    {
+                        "issueName": "🐛 [firebase_messaging] MacOS ImageNotification not showing images",
+                        "issueUrl": "https://www.github.com/FirebaseExtended/flutterfire/issues/5717"
+                    },
+                    {
+                        "issueName": "E/FlutterFcmService(20850): Fatal: failed to find callback W/FirebaseMessaging(20850): Missing Default Notification Channel metadata in AndroidManifest. Default value will be used.",
+                        "issueUrl": "https://www.github.com/FirebaseExtended/flutterfire/issues/5716"
+                    },
+                    {
+                        "issueName": "🐛 [firebase_auth] getIdTokenResult() not returning anything",
+                        "issueUrl": "https://www.github.com/FirebaseExtended/flutterfire/issues/5713"
+                    },
+                    {
+                        "issueName": "🐛 [firebase_auth] can't use this plugin",
+                        "issueUrl": "https://www.github.com/FirebaseExtended/flutterfire/issues/5707"
+                    },
+                    {
+                        "issueName": "🐛 [firebase_messaging] When sending notifications to IOS, No Response",
+                        "issueUrl": "https://www.github.com/FirebaseExtended/flutterfire/issues/5706"
+                    },
+                    {
+                        "issueName": "🐛 [firebase_messaging] onBackgroundMessage throws NoSuchMethodError on Android.",
+                        "issueUrl": "https://www.github.com/FirebaseExtended/flutterfire/issues/5697"
+                    },
+                    {
+                        "issueName": " #import <firebase_core/FLTFirebasePluginRegistry.h>",
+                        "issueUrl": "https://www.github.com/FirebaseExtended/flutterfire/issues/5694"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            react-firebase-starter\n",
+                "repoUrl": "https://github.com/kriasoft/react-firebase-starter",
+                "issues": [
+                    {
+                        "issueName": "If I need a pure front-end frame, how can I refit it(react-firebase-starter) ?",
+                        "issueUrl": "https://www.github.com/kriasoft/react-firebase-starter/issues/751"
+                    },
+                    {
+                        "issueName": "How to pagination users or stories?",
+                        "issueUrl": "https://www.github.com/kriasoft/react-firebase-starter/issues/681"
+                    },
+                    {
+                        "issueName": "[Question] What's the usual cost for maintaining this setup on gcloud+firebase?",
+                        "issueUrl": "https://www.github.com/kriasoft/react-firebase-starter/issues/667"
+                    },
+                    {
+                        "issueName": "How to run react-firebase-starter in different GCP region",
+                        "issueUrl": "https://www.github.com/kriasoft/react-firebase-starter/issues/626"
+                    },
+                    {
+                        "issueName": "[Feature Request] Scalars",
+                        "issueUrl": "https://www.github.com/kriasoft/react-firebase-starter/issues/614"
+                    },
+                    {
+                        "issueName": "Cannot read property 'tap' of undefined with Typescript added",
+                        "issueUrl": "https://www.github.com/kriasoft/react-firebase-starter/issues/576"
+                    },
+                    {
+                        "issueName": "Subscriptions example",
+                        "issueUrl": "https://www.github.com/kriasoft/react-firebase-starter/issues/538"
+                    },
+                    {
+                        "issueName": "Admin Access",
+                        "issueUrl": "https://www.github.com/kriasoft/react-firebase-starter/issues/429"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            FirebaseUI-Android\n",
+                "repoUrl": "https://github.com/firebase/FirebaseUI-Android",
+                "issues": [
+                    {
+                        "issueName": "FirebaseUI: AuthMethodPickerActivity crashes when using attrs in theme.",
+                        "issueUrl": "https://www.github.com/firebase/FirebaseUI-Android/issues/1931"
+                    },
+                    {
+                        "issueName": "[Feature Request] Jetpack Compose Support for AuthUI",
+                        "issueUrl": "https://www.github.com/firebase/FirebaseUI-Android/issues/1917"
+                    },
+                    {
+                        "issueName": "[Feature Request] Support Activity Result APIs for AuthUI",
+                        "issueUrl": "https://www.github.com/firebase/FirebaseUI-Android/issues/1916"
+                    },
+                    {
+                        "issueName": "Add ability to specify default_web_client_id at runtime",
+                        "issueUrl": "https://www.github.com/firebase/FirebaseUI-Android/issues/1911"
+                    },
+                    {
+                        "issueName": "Outdated documentation for email-link setup",
+                        "issueUrl": "https://www.github.com/firebase/FirebaseUI-Android/issues/1909"
+                    },
+                    {
+                        "issueName": "Error message when user is offline.",
+                        "issueUrl": "https://www.github.com/firebase/FirebaseUI-Android/issues/1908"
+                    },
+                    {
+                        "issueName": "Progress Indication - Replace third party library with material components LinearProgressIndicator",
+                        "issueUrl": "https://www.github.com/firebase/FirebaseUI-Android/issues/1907"
+                    },
+                    {
+                        "issueName": "Remove whitelist and blacklist from the API",
+                        "issueUrl": "https://www.github.com/firebase/FirebaseUI-Android/issues/1906"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "projectName": "Wagtail",
+        "projectUrl": "https://github.com/topics/wagtail",
+        "gitRepos": [
+            {
+                "repoName": "\n            wagtail\n",
+                "repoUrl": "https://github.com/wagtail/wagtail",
+                "issues": [
+                    {
+                        "issueName": "Improving signal examples",
+                        "issueUrl": "https://www.github.com/wagtail/wagtail/issues/6991"
+                    },
+                    {
+                        "issueName": "Refactor Page.serve_preview() and Page.serve()",
+                        "issueUrl": "https://www.github.com/wagtail/wagtail/issues/6987"
+                    },
+                    {
+                        "issueName": "Wagtail Admin Explorer Filter",
+                        "issueUrl": "https://www.github.com/wagtail/wagtail/issues/6982"
+                    },
+                    {
+                        "issueName": "Formalise Django 3.2 support",
+                        "issueUrl": "https://www.github.com/wagtail/wagtail/issues/6981"
+                    },
+                    {
+                        "issueName": "on_delete=models.RESTRICT support.",
+                        "issueUrl": "https://www.github.com/wagtail/wagtail/issues/6964"
+                    },
+                    {
+                        "issueName": "Switch off the anchor links feature by default",
+                        "issueUrl": "https://www.github.com/wagtail/wagtail/issues/6963"
+                    },
+                    {
+                        "issueName": "IE11 support currently broken for Draftail/telepath",
+                        "issueUrl": "https://www.github.com/wagtail/wagtail/issues/6961"
+                    },
+                    {
+                        "issueName": "formbuilder API headless",
+                        "issueUrl": "https://www.github.com/wagtail/wagtail/issues/6950"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            awesome-wagtail\n",
+                "repoUrl": "https://github.com/springload/awesome-wagtail",
+                "issues": [
+                    {
+                        "issueName": "wagtail_textract not compatible with current Wagtail",
+                        "issueUrl": "https://www.github.com/springload/awesome-wagtail/issues/155"
+                    },
+                    {
+                        "issueName": "wagtail_blog has moved to GitLab",
+                        "issueUrl": "https://www.github.com/springload/awesome-wagtail/issues/154"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            bakerydemo\n",
+                "repoUrl": "https://github.com/wagtail/bakerydemo",
+                "issues": [
+                    {
+                        "issueName": "Dotenv syntax warning on fresh install",
+                        "issueUrl": "https://www.github.com/wagtail/bakerydemo/issues/289"
+                    },
+                    {
+                        "issueName": "Explanation of this project's structure versus the 'wagtail start' structure?",
+                        "issueUrl": "https://www.github.com/wagtail/bakerydemo/issues/283"
+                    },
+                    {
+                        "issueName": "Error attempting to publish edits of gallery page",
+                        "issueUrl": "https://www.github.com/wagtail/bakerydemo/issues/282"
+                    },
+                    {
+                        "issueName": "Please consider diversity concerns in the people you portray in your images collection.",
+                        "issueUrl": "https://www.github.com/wagtail/bakerydemo/issues/281"
+                    },
+                    {
+                        "issueName": "Default django-cache-url config causes routing issues on Heroku",
+                        "issueUrl": "https://www.github.com/wagtail/bakerydemo/issues/279"
+                    },
+                    {
+                        "issueName": "Trying the demo - 'search the site' not working as expected",
+                        "issueUrl": "https://www.github.com/wagtail/bakerydemo/issues/237"
+                    },
+                    {
+                        "issueName": "Demo not suitable for Windows, due to using uwsgi an django-dotenv",
+                        "issueUrl": "https://www.github.com/wagtail/bakerydemo/issues/218"
+                    },
+                    {
+                        "issueName": "Add docker-compose volumne",
+                        "issueUrl": "https://www.github.com/wagtail/bakerydemo/issues/207"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            puput\n",
+                "repoUrl": "https://github.com/APSL/puput",
+                "issues": [
+                    {
+                        "issueName": "How to insert Code Snippet?",
+                        "issueUrl": "https://www.github.com/APSL/puput/issues/240"
+                    },
+                    {
+                        "issueName": "Circular Import Error with 'include('puput.urls')' in Django urls.py",
+                        "issueUrl": "https://www.github.com/APSL/puput/issues/239"
+                    },
+                    {
+                        "issueName": "Update to Python3.9, Wagtail 2.9, Django 3.1?",
+                        "issueUrl": "https://www.github.com/APSL/puput/issues/238"
+                    },
+                    {
+                        "issueName": "Customize BlogPage Subpage Types",
+                        "issueUrl": "https://www.github.com/APSL/puput/issues/237"
+                    },
+                    {
+                        "issueName": "Problems with installation over existing wagtail and multilanguage",
+                        "issueUrl": "https://www.github.com/APSL/puput/issues/236"
+                    },
+                    {
+                        "issueName": "FontAwesome files are empty (zero file size)",
+                        "issueUrl": "https://www.github.com/APSL/puput/issues/235"
+                    },
+                    {
+                        "issueName": "Puput internationalization",
+                        "issueUrl": "https://www.github.com/APSL/puput/issues/234"
+                    },
+                    {
+                        "issueName": "URL issues with install over existing wagtail instance",
+                        "issueUrl": "https://www.github.com/APSL/puput/issues/231"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            draftail\n",
+                "repoUrl": "https://github.com/springload/draftail",
+                "issues": [
+                    {
+                        "issueName": "Need help integrating @draft-js-plugins/mention",
+                        "issueUrl": "https://www.github.com/springload/draftail/issues/440"
+                    },
+                    {
+                        "issueName": "Support full aria controls provided by draftJS",
+                        "issueUrl": "https://www.github.com/springload/draftail/issues/436"
+                    },
+                    {
+                        "issueName": "Plugin handlePastedText doesn't get called when setting stripPastedStyles=false",
+                        "issueUrl": "https://www.github.com/springload/draftail/issues/435"
+                    },
+                    {
+                        "issueName": "Checkbox plugin: Editing the text on the line, most of the characters get deleted, after checkbox is ticked.",
+                        "issueUrl": "https://www.github.com/springload/draftail/issues/426"
+                    },
+                    {
+                        "issueName": "Is this project dead?",
+                        "issueUrl": "https://www.github.com/springload/draftail/issues/406"
+                    },
+                    {
+                        "issueName": "Content-state is not updated during typing korean ",
+                        "issueUrl": "https://www.github.com/springload/draftail/issues/405"
+                    },
+                    {
+                        "issueName": "Using Draftail with Rollup",
+                        "issueUrl": "https://www.github.com/springload/draftail/issues/399"
+                    },
+                    {
+                        "issueName": "Horizontal text alignment ",
+                        "issueUrl": "https://www.github.com/springload/draftail/issues/395"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            coderedcms\n",
+                "repoUrl": "https://github.com/coderedcorp/coderedcms",
+                "issues": [
+                    {
+                        "issueName": "Form page confirmation_emails field template strings",
+                        "issueUrl": "https://www.github.com/coderedcorp/coderedcms/issues/414"
+                    },
+                    {
+                        "issueName": "Replace wagtail-import-export with wagtail-transfer",
+                        "issueUrl": "https://www.github.com/coderedcorp/coderedcms/issues/411"
+                    },
+                    {
+                        "issueName": "Comments Features is missing?",
+                        "issueUrl": "https://www.github.com/coderedcorp/coderedcms/issues/410"
+                    },
+                    {
+                        "issueName": "Upgrade to Wagtail 2.12",
+                        "issueUrl": "https://www.github.com/coderedcorp/coderedcms/issues/409"
+                    },
+                    {
+                        "issueName": "Get IPv4 address (or IPv6 address) that submitted the Form?",
+                        "issueUrl": "https://www.github.com/coderedcorp/coderedcms/issues/405"
+                    },
+                    {
+                        "issueName": "PostgreSQL database psycopg2.errors.NotNullViolation: null value in column \"translation_key\" violates not-null constraint",
+                        "issueUrl": "https://www.github.com/coderedcorp/coderedcms/issues/403"
+                    },
+                    {
+                        "issueName": "Add size choice for modal",
+                        "issueUrl": "https://www.github.com/coderedcorp/coderedcms/issues/401"
+                    },
+                    {
+                        "issueName": "Stretch Link for Modal",
+                        "issueUrl": "https://www.github.com/coderedcorp/coderedcms/issues/400"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            wagtaildemo\n",
+                "repoUrl": "https://github.com/wagtail/wagtaildemo",
+                "issues": [
+                    {
+                        "issueName": "Pull initial data in with migration",
+                        "issueUrl": "https://www.github.com/wagtail/wagtaildemo/issues/28"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            longclaw\n",
+                "repoUrl": "https://github.com/JamesRamm/longclaw",
+                "issues": [
+                    {
+                        "issueName": "Call For Maintainers",
+                        "issueUrl": "https://www.github.com/JamesRamm/longclaw/issues/375"
+                    },
+                    {
+                        "issueName": "Has anyone built a website with longclaw?",
+                        "issueUrl": "https://www.github.com/JamesRamm/longclaw/issues/374"
+                    },
+                    {
+                        "issueName": "ImportError with ipware.ip",
+                        "issueUrl": "https://www.github.com/JamesRamm/longclaw/issues/373"
+                    },
+                    {
+                        "issueName": "Longclaw with latest Wagtail and Django 3?",
+                        "issueUrl": "https://www.github.com/JamesRamm/longclaw/issues/368"
+                    },
+                    {
+                        "issueName": "Demo url on doc page not working",
+                        "issueUrl": "https://www.github.com/JamesRamm/longclaw/issues/348"
+                    },
+                    {
+                        "issueName": "Client Bundle Webpack Error",
+                        "issueUrl": "https://www.github.com/JamesRamm/longclaw/issues/344"
+                    },
+                    {
+                        "issueName": "How to \"do away with Product completely\"?",
+                        "issueUrl": "https://www.github.com/JamesRamm/longclaw/issues/327"
+                    },
+                    {
+                        "issueName": "python3 manage.py makemigrations home catalog",
+                        "issueUrl": "https://www.github.com/JamesRamm/longclaw/issues/324"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "projectName": "Raspberry",
+        "projectUrl": "https://github.com/topics/raspberry-pi",
+        "gitRepos": [
+            {
+                "repoName": "\n            core\n",
+                "repoUrl": "https://github.com/home-assistant/core",
+                "issues": [
+                    {
+                        "issueName": "Automation fires 1 hour after the specified time ",
+                        "issueUrl": "https://www.github.com/home-assistant/core/issues/49049"
+                    },
+                    {
+                        "issueName": "Certificate validation error: private.host.name [unable to get local issuer certificate]",
+                        "issueUrl": "https://www.github.com/home-assistant/core/issues/49048"
+                    },
+                    {
+                        "issueName": "Harmony Hub Integration loses connection each night and stays disconnected until restart",
+                        "issueUrl": "https://www.github.com/home-assistant/core/issues/49046"
+                    },
+                    {
+                        "issueName": "Error Unknown Flow - Lyric OAuth Callback",
+                        "issueUrl": "https://www.github.com/home-assistant/core/issues/49043"
+                    },
+                    {
+                        "issueName": "scrape sensor not working",
+                        "issueUrl": "https://www.github.com/home-assistant/core/issues/49042"
+                    },
+                    {
+                        "issueName": "Integration SPOTIFY doest report any device or entity",
+                        "issueUrl": "https://www.github.com/home-assistant/core/issues/49041"
+                    },
+                    {
+                        "issueName": "Speedtest.net integration doesnt work",
+                        "issueUrl": "https://www.github.com/home-assistant/core/issues/49039"
+                    },
+                    {
+                        "issueName": "surepet plugin failing to load after recent upgrade",
+                        "issueUrl": "https://www.github.com/home-assistant/core/issues/49032"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            pi-hole\n",
+                "repoUrl": "https://github.com/pi-hole/pi-hole",
+                "issues": [
+                    {
+                        "issueName": "Default blocking behavior makes Chrome slow",
+                        "issueUrl": "https://www.github.com/pi-hole/pi-hole/issues/4107"
+                    },
+                    {
+                        "issueName": "Pihole *DEV* will return HTTP ERROR 500 on 404 pages where the generic page is expected.",
+                        "issueUrl": "https://www.github.com/pi-hole/pi-hole/issues/4098"
+                    },
+                    {
+                        "issueName": "Teleporter restore concatenates custom.list instead of replacing despite checking \"clear data\"",
+                        "issueUrl": "https://www.github.com/pi-hole/pi-hole/issues/4077"
+                    },
+                    {
+                        "issueName": "pihole -up fails when dhcpcd5 is held",
+                        "issueUrl": "https://www.github.com/pi-hole/pi-hole/issues/4051"
+                    },
+                    {
+                        "issueName": "pihole -up can't detect broken git repo to determinate subsystem not up-to-date",
+                        "issueUrl": "https://www.github.com/pi-hole/pi-hole/issues/4050"
+                    },
+                    {
+                        "issueName": "Running Teleporter from the CLI does not include hostname",
+                        "issueUrl": "https://www.github.com/pi-hole/pi-hole/issues/4048"
+                    },
+                    {
+                        "issueName": "Pi-hole no longer allowing internet access on wifi after changing to a recursive dns, but wired still works.",
+                        "issueUrl": "https://www.github.com/pi-hole/pi-hole/issues/4031"
+                    },
+                    {
+                        "issueName": "Error in instructions to skip OS check (when updating)",
+                        "issueUrl": "https://www.github.com/pi-hole/pi-hole/issues/4032"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            MagicMirror\n",
+                "repoUrl": "https://github.com/MichMich/MagicMirror",
+                "issues": [
+                    {
+                        "issueName": "[Weather Module] decimalSymbol has no effect",
+                        "issueUrl": "https://www.github.com/MichMich/MagicMirror/issues/2530"
+                    },
+                    {
+                        "issueName": "Calendar: end date missing for multi day events (like holidays)",
+                        "issueUrl": "https://www.github.com/MichMich/MagicMirror/issues/2529"
+                    },
+                    {
+                        "issueName": "Codecov makes tests fail.",
+                        "issueUrl": "https://www.github.com/MichMich/MagicMirror/issues/2528"
+                    },
+                    {
+                        "issueName": "cc",
+                        "issueUrl": "https://www.github.com/MichMich/MagicMirror/issues/2524"
+                    },
+                    {
+                        "issueName": "[Alert Module] Multiple Alerts doesn't show as expected",
+                        "issueUrl": "https://www.github.com/MichMich/MagicMirror/issues/2522"
+                    },
+                    {
+                        "issueName": "silly question. is it just the black reflection? what am i doing wrong?",
+                        "issueUrl": "https://www.github.com/MichMich/MagicMirror/issues/2516"
+                    },
+                    {
+                        "issueName": "Proposal: CSS Custom Properties to make styling more accessible",
+                        "issueUrl": "https://www.github.com/MichMich/MagicMirror/issues/2513"
+                    },
+                    {
+                        "issueName": "ms custom timezone causes problems",
+                        "issueUrl": "https://www.github.com/MichMich/MagicMirror/issues/2509"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            johnny-five\n",
+                "repoUrl": "https://github.com/rwaldron/johnny-five",
+                "issues": [
+                    {
+                        "issueName": "RFID",
+                        "issueUrl": "https://www.github.com/rwaldron/johnny-five/issues/1725"
+                    },
+                    {
+                        "issueName": "Version 2.0 problem with Node-Red",
+                        "issueUrl": "https://www.github.com/rwaldron/johnny-five/issues/1724"
+                    },
+                    {
+                        "issueName": "Raspberry Pi Keypad 4x4 I2C Nano Backpack leads to a crash",
+                        "issueUrl": "https://www.github.com/rwaldron/johnny-five/issues/1723"
+                    },
+                    {
+                        "issueName": "Can't Read Pin State",
+                        "issueUrl": "https://www.github.com/rwaldron/johnny-five/issues/1715"
+                    },
+                    {
+                        "issueName": "Sensor on A2 stops Button on 2 from working",
+                        "issueUrl": "https://www.github.com/rwaldron/johnny-five/issues/1713"
+                    },
+                    {
+                        "issueName": "Accelerometer: LIS3DH / LIS3DHTR",
+                        "issueUrl": "https://www.github.com/rwaldron/johnny-five/issues/1709"
+                    },
+                    {
+                        "issueName": "RockPi E Support",
+                        "issueUrl": "https://www.github.com/rwaldron/johnny-five/issues/1708"
+                    },
+                    {
+                        "issueName": "Servo interfering with AnalogWrite on other pins",
+                        "issueUrl": "https://www.github.com/rwaldron/johnny-five/issues/1707"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            nnn\n",
+                "repoUrl": "https://github.com/jarun/nnn",
+                "issues": [
+                    {
+                        "issueName": "Close CMD prompt on Ctrl + D",
+                        "issueUrl": "https://www.github.com/jarun/nnn/issues/943"
+                    },
+                    {
+                        "issueName": "Default light colorscheme",
+                        "issueUrl": "https://www.github.com/jarun/nnn/issues/937"
+                    },
+                    {
+                        "issueName": "ToDo list",
+                        "issueUrl": "https://www.github.com/jarun/nnn/issues/935"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            raspberry-pi-os\n",
+                "repoUrl": "https://github.com/s-matyukevich/raspberry-pi-os",
+                "issues": [
+                    {
+                        "issueName": "I want to run a program in which when button is pressed the led blinks 10 times with a delay and if the button is kept pressed the led while stay on until i dont rlease the button.",
+                        "issueUrl": "https://www.github.com/s-matyukevich/raspberry-pi-os/issues/233"
+                    },
+                    {
+                        "issueName": "Is the file name would affect the compiler process?",
+                        "issueUrl": "https://www.github.com/s-matyukevich/raspberry-pi-os/issues/232"
+                    },
+                    {
+                        "issueName": "About lesson7 to 11",
+                        "issueUrl": "https://www.github.com/s-matyukevich/raspberry-pi-os/issues/231"
+                    },
+                    {
+                        "issueName": "Resources to learn more about upcoming lessons",
+                        "issueUrl": "https://www.github.com/s-matyukevich/raspberry-pi-os/issues/229"
+                    },
+                    {
+                        "issueName": "Failed to move to user mode on Raspberry Pi 4B",
+                        "issueUrl": "https://www.github.com/s-matyukevich/raspberry-pi-os/issues/228"
+                    },
+                    {
+                        "issueName": "Lesson 1: gibberish output from hello world",
+                        "issueUrl": "https://www.github.com/s-matyukevich/raspberry-pi-os/issues/227"
+                    },
+                    {
+                        "issueName": "lesson 01, How CPU find kernel_main in kernel.c from boot.S",
+                        "issueUrl": "https://www.github.com/s-matyukevich/raspberry-pi-os/issues/225"
+                    },
+                    {
+                        "issueName": "[Lesson04] Raspberry Pi 4 Model B Make error",
+                        "issueUrl": "https://www.github.com/s-matyukevich/raspberry-pi-os/issues/217"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            RetroPie-Setup\n",
+                "repoUrl": "https://github.com/RetroPie/RetroPie-Setup",
+                "issues": [
+                    {
+                        "issueName": "Preparation for Amiberry v4.x",
+                        "issueUrl": "https://www.github.com/RetroPie/RetroPie-Setup/issues/3313"
+                    },
+                    {
+                        "issueName": "Audio Settings Cause Controllers to Stop Working",
+                        "issueUrl": "https://www.github.com/RetroPie/RetroPie-Setup/issues/3305"
+                    },
+                    {
+                        "issueName": "RetroArch doesn't save changed values that are already set in an included config",
+                        "issueUrl": "https://www.github.com/RetroPie/RetroPie-Setup/issues/3249"
+                    },
+                    {
+                        "issueName": "building retropie on ubuntu armhf or aarch64 rpi4 ",
+                        "issueUrl": "https://www.github.com/RetroPie/RetroPie-Setup/issues/3212"
+                    },
+                    {
+                        "issueName": "bluetooth issue if controller die during pairing",
+                        "issueUrl": "https://www.github.com/RetroPie/RetroPie-Setup/issues/3198"
+                    },
+                    {
+                        "issueName": "Per-core 'Reset to default configuration' option",
+                        "issueUrl": "https://www.github.com/RetroPie/RetroPie-Setup/issues/3194"
+                    },
+                    {
+                        "issueName": "Enhancement Request: Reicast Target Naomi and Atomiswave",
+                        "issueUrl": "https://www.github.com/RetroPie/RetroPie-Setup/issues/3169"
+                    },
+                    {
+                        "issueName": "Problems with netplay guest",
+                        "issueUrl": "https://www.github.com/RetroPie/RetroPie-Setup/issues/3161"
+                    }
+                ]
+            },
+            {
+                "repoName": "\n            qt\n",
+                "repoUrl": "https://github.com/therecipe/qt",
+                "issues": [
+                    {
+                        "issueName": "Fails to install (OSX 11.2.3) - hardcoded Qt version?",
+                        "issueUrl": "https://www.github.com/therecipe/qt/issues/1227"
+                    },
+                    {
+                        "issueName": "qtdeploy does not support specifying main file",
+                        "issueUrl": "https://www.github.com/therecipe/qt/issues/1226"
+                    },
+                    {
+                        "issueName": "Iconfont cannot be used",
+                        "issueUrl": "https://www.github.com/therecipe/qt/issues/1225"
+                    },
+                    {
+                        "issueName": "What about qt5.15?",
+                        "issueUrl": "https://www.github.com/therecipe/qt/issues/1223"
+                    },
+                    {
+                        "issueName": "Nested structs with library interface references in listview",
+                        "issueUrl": "https://www.github.com/therecipe/qt/issues/1222"
+                    },
+                    {
+                        "issueName": "qtmoc&&qtdeploy work fine, but qtmoc&&go run . failed",
+                        "issueUrl": "https://www.github.com/therecipe/qt/issues/1221"
+                    },
+                    {
+                        "issueName": "How to embed rcc file to use with golang?",
+                        "issueUrl": "https://www.github.com/therecipe/qt/issues/1220"
+                    },
+                    {
+                        "issueName": "Is there an example here of how I can use my own classes in bindings?",
+                        "issueUrl": "https://www.github.com/therecipe/qt/issues/1219"
+                    }
+                ]
+            }
+        ]
+    }
+]
