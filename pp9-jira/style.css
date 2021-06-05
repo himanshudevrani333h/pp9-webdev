@@ -18,7 +18,11 @@ body {
 
 .grid {
   background-color: #f2f2f2;
-  height: 88%;
+  min-height: 88%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1.5rem;
 }
 
 .filter-container,
@@ -96,6 +100,10 @@ body {
   background-color: #393939;
 }
 
+.delete-state {
+  background-color: #393939!important;
+}
+
 .modal-container {
   box-shadow: 0px 5px 10px 0px #aaa;
   height: 18rem;
@@ -134,5 +142,43 @@ body {
 }
 
 .modal-filter:hover {
+  opacity: 1;
+}
+
+.ticket {
+  background-color: white;
+  height: 8rem;
+  width: 15rem;
+  margin-bottom: 20px;
+}
+
+.ticket-color {
+  width: 100%;
+  height: 5%;
+}
+
+.ticket-id {
+  height: 20%;
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #989393;
+}
+
+.ticket-box {
+  padding: 10px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: auto;
+  width: 100%;
+  height: 75%;
+  outline: none;
+}
+
+.active-modal-filter {
+  border: 5px solid red;
   opacity: 1;
 }

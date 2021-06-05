@@ -20,6 +20,10 @@ body {
 .grid {
     background-color: #f2f2f2;
     height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+    flex-wrap: wrap;
 }
 
 .filter-container, .action-bar {
@@ -36,6 +40,7 @@ body {
 }
 
 .action-bar {
+    margin-left: 8rem;
     width: 7.5rem;
     display: flex;
 }
@@ -73,6 +78,11 @@ body {
     background-color: black;
 }
 
+.active {
+    border: 5px solid white;
+    opacity: 1;
+}
+
 .add, .remove {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -82,14 +92,26 @@ body {
 }
 
 .add {
-    font-size: 3rem;
-}
-
-.remove {
     font-size: 2.5rem;
 }
 
+.remove {
+    font-size: 2rem;
+}
+
+.fa-trash {
+    margin-top: .8rem;
+}
+
+.fa-plus {
+    margin-top: .5rem;
+}
+
 .add:hover, .remove:hover {
+    background-color: #393939;
+}
+
+.remove-active,.selected-filter {
     background-color: #393939;
 }
 
@@ -139,14 +161,16 @@ body {
     background-color: white;
     height: 10rem;
     width: 18rem;
+    margin-top: .5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .ticket-color {
-    background-color: red;
     height: .8rem;
     width: 100%;
-    border-top-left-radius: 1.5px;
-    border-top-right-radius: 1.5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .ticket-id {
@@ -156,8 +180,7 @@ body {
     padding-left: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color:  #444;
-    
+    color: #444;
 }
 
 .ticket-box {
@@ -165,8 +188,76 @@ body {
     height: 72%;
     width: 100%;
     background-color: white;
-    overflow-y:auto;
+    overflow-y: auto;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     outline: none;
+}
+
+@media (max-width:1024px){
+    .filter-container, .action-bar {
+        height: 47%;
+        margin-top: 2.2rem;
+    }
+}
+
+@media (max-width:768px) {
+    .filter-container, .action-bar {
+        height: 62%;
+        width: 12rem;
+        margin-top: 0.7rem;
+        margin-left: 4.5rem;
+    }
+    .ticket {
+        margin-bottom: .5rem;
+    }
+    .action-bar{
+        width: 7rem;
+    }
+    .add {
+        font-size: 2rem;
+    }
+    .fa-plus {
+        margin-top: .3rem;
+    }
+    .remove {
+        font-size: 1.5rem;
+    }
+    .fa-trash {
+        margin-top: .5rem;
+    }
+}
+
+@media (max-width:600px) {
+    .filter-container, .action-bar {
+        margin-left: 1.5rem;
+        height: 57%;
+        margin-top: 0.8rem;
+        width:9rem;
+    }
+    .add {
+        font-size: 2rem;
+    }
+    .fa-plus {
+        margin-top: .3rem;
+    }
+    .action-bar {
+        margin-left: 3rem;
+        width: 5.5rem;
+    }
+    .remove {
+        font-size: 1.5rem;
+    }
+    .fa-trash {
+        margin-top: 0.6rem;
+    }
+    .filter {
+        margin-top: -0.2rem;
+    }
+    .modal-container {
+        height: 14rem;
+        width: 24rem;
+        top: calc((100vh - 15rem) / 2);
+        left: calc((100vw - 24rem) / 2);
+    }
 }
