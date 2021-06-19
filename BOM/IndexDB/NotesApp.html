@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        height: 30rem;
+        width: 50rem;
+        /* border: 1px solid; */
+        margin: auto;
+        margin-top: calc((100vh - 30rem) / 2);
+      }
+      #inp1 {
+        height: 3rem;
+        width: 12rem;
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+        text-align: center;
+      }
+
+      #notes {
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+      }
+
+      #inp2 {
+        height: 10rem;
+        width: 25rem;
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+      }
+      button {
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="inp1" placeholder="titleOfNotes" />
+      <select id="notes">
+        <option value="generalNotes">generalnotes</option>
+        <option value="placementNotes">placementnotes</option>
+        <option value="collegeNotes">collegeNotes</option>
+      </select>
+      <input type="text" id="inp2" placeholder="content" />
+      <button class="submit">Submit</button>
+      <hr />
+      <button id="placement">View placementNotes</button>
+      <button id="college">View collegeNotes</button>
+      <button id="general">View generalNotes</button>
+      <ul></ul>
+    </div>
+
+    <script>
+      let db;
+      let submit_btn = document.querySelector(".submit");
+      let title = document.querySelector("#inp1");
+      let content = document.querySelector("#inp2");
+      let collection = document.querySelector("select");
+      let ul = document.querySelector("ul");
+      let submitBtn = document.querySelector("#submit");
+      let placementBtn = document.querySelector("#placement");
+      let collegeBtn = document.querySelector("#college");
+      let generalBtn = document.querySelector("#general");
+
+      let req = indexedDB.open("NotesDB", 1);
+      //indexdb.open("name of db","version")
+      req.addEventListener("success", function () {
+        db = req.result; // req.result provide access to modify and read data indexdb
+        //   alert("index db was opened succesfully");
+      });
+      placementBtn.addEventListener("click", function () {
+        viewNotes("placementNotes");
+      });
+
+      collegeBtn.addEventListener("click", function () {
+        viewNotes("collegeNotes");
+      });
+
+      generalBtn.addEventListener("click", function () {
+        viewNotes("generalNotes");
+      });
+      submit_btn.addEventListener("click", function () {
+        if (title.val == "" || content.val == "") {
+          alert("please enter all values!");
+          return;
+        } else {
+          let title_text = title.value;
+          let content_text = content.value;
+          let drop_down = collection.value;
+          let obj = {};
+          if (drop_down == "placementNotes") obj.pID = Date.now();
+          if (drop_down == "generalNotes") obj.gID = Date.now();
+          if (drop_down == "collegeNotes") obj.cID = Date.now();
+
+          obj.title = title_text;
+          obj.content = content_text;
+
+          addNotes(drop_down, obj);
+        }
+
+        // console.log(drop_down);
+      });
+
+      //upgrade event occurs in 2 cases
+      // case1 : when we create a new db
+      //case2: when we try to open existed db with increment version
+
+      req.addEventListener("upgradeneeded", function () {
+        let accesstonotesDB = req.result;
+        //   alert("index db was upgraded");
+        accesstonotesDB.createObjectStore("placementNotes", { keyPath: "pID" });
+        accesstonotesDB.createObjectStore("collegeNotes", { keyPath: "cID" });
+        accesstonotesDB.createObjectStore("generalNotes", { keyPath: "gID" });
+      });
+
+      req.addEventListener("error", function () {
+        //   alert("error");
+      });
+
+      function addNotes(Collection_Name, obj) {
+        if (!db) return;
+
+        let ts = db.transaction(Collection_Name, "readwrite");
+        let requiredObjStore = ts.objectStore(Collection_Name);
+        requiredObjStore.add(obj);
+      }
+
+      function viewNotes(Collection_Name) {
+        if (!db) return;
+
+        let ts = db.transaction(Collection_Name, "readonly");
+        let requiredObjStore = ts.objectStore(Collection_Name);
+
+        let curserReq = requiredObjStore.openCursor();
+
+        let oldLi = ul.querySelectorAll("li");
+        for (let i = 0; i < oldLi.length; i++) oldLi[i].remove();
+
+        curserReq.addEventListener("success", function () {
+          let cursor = curserReq.result;
+          if (cursor) {
+            let li = document.createElement("li");
+            li.innerHTML = `<div>${cursor.value.title}</div><div>${cursor.value.content}</div><br>`;
+            ul.append(li);
+            cursor.continue();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -107,6 +107,15 @@ body {
     margin-top: .5rem;
 }
 
+.fa-lock,.fa-unlock-alt{
+    display: flex;
+    height: 3px;
+    width: 2px;
+    margin-top: .3rem;
+    margin-left: 7.5rem;
+    color: #333333;
+}
+
 .add:hover, .remove:hover {
     background-color: #393939;
 }
@@ -174,6 +183,7 @@ body {
 }
 
 .ticket-id {
+    display: flex;
     height: 2rem;
     width: 100%;
     font-size: 25px;
@@ -199,9 +209,9 @@ body {
         height: 47%;
         margin-top: 2.2rem;
     }
-}
+} 
 
-@media (max-width:768px) {
+ @media (max-width:768px) {
     .filter-container, .action-bar {
         height: 62%;
         width: 12rem;
@@ -210,6 +220,8 @@ body {
     }
     .ticket {
         margin-bottom: .5rem;
+        height: 7rem;
+    width: 13rem;
     }
     .action-bar{
         width: 7rem;

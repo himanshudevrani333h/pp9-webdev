@@ -90,13 +90,29 @@ addbtn.addEventListener("click", function (e) {
             let id = uid();
             ticket.classList.add("ticket")
             ticket.innerHTML = `<div class="ticket-color ${color}"></div>
-               <div class="ticket-id">#${id}</div>
+            <div class="ticket-id">#${id}
+            <i class="fa fa-unlock-alt" aria-hidden="true"></i></div>
                <div class="ticket-box" contenteditable>${task}</div>`;
 
 
             savedatainlocalstorage(id, color, task)
+
             let ticketWA = ticket.querySelector(".ticket-box")
             ticketWA.addEventListener("input", writingareahandler);
+
+            let lock = ticket.querySelector("i")
+            lock.addEventListener("click", function (e) {
+                console.log(lock.classList[1])
+                if (lock.classList[1] == "fa-unlock-alt") {
+                    lock.classList.remove("fa-unlock-alt");
+                    lock.classList.add("fa-lock")
+                    ticketWA.removeAttribute("contenteditable")
+                } else {
+                    lock.classList.remove("fa-lock");
+                    lock.classList.add("fa-unlock-alt")
+                    ticketWA.setAttribute("contenteditable", "true")
+                }
+            })
 
 
             ticket.addEventListener("click", function (e) {
@@ -205,11 +221,27 @@ function loadtickets(passedColor) {
         let ticket = document.createElement("div");
         ticket.classList.add("ticket")
         ticket.innerHTML = `<div class="ticket-color ${color}"></div>
-               <div class="ticket-id">#${id}</div>
-               <div class="ticket-box" contenteditable>${task}</div>`;
+         <div class="ticket-id">#${id}
+         <i class="fa fa-unlock-alt" aria-hidden="true"></i></div>
+         <div class="ticket-box" contenteditable>${task}</div>`;
 
         let ticketWA = ticket.querySelector(".ticket-box")
         ticketWA.addEventListener("input", writingareahandler);
+
+        let lock = ticket.querySelector("i")
+        lock.addEventListener("click", function (e) {
+            console.log(lock.classList[1])
+            if (lock.classList[1] == "fa-unlock-alt") {
+                lock.classList.remove("fa-unlock-alt");
+                lock.classList.add("fa-lock")
+                ticketWA.removeAttribute("contenteditable")
+            } else {
+                lock.classList.remove("fa-lock");
+                lock.classList.add("fa-unlock-alt")
+                ticketWA.setAttribute("contenteditable", "true")
+
+            }
+        })
 
         let ticketcolor = ticket.querySelector(".ticket-color");
         ticketcolor.addEventListener("click", ticketcolorhandler);

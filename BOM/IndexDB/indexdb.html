@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let req = indexedDB.open("IndexDB", 1);
+      //indexdb.open("name of db","version")
+      req.addEventListener("success", function () {
+        let accesstonodeDB = req.result; // req.result provide access to modify and read data indexdb
+        alert("index db was opened succesfully");
+      });
+
+      //upgrade event occurs in 2 cases
+      // case1 : when we create a new db
+      //case2: when we try to open existed db with increment version
+
+      req.addEventListener("upgradeneeded", function () {
+        let accesstonodeDB = req.result;
+        alert("index db was upgraded");
+      });
+
+      req.addEventListener("error", function () {
+        alert("error");
+      });
+    </script>
+  </body>
+</html>
