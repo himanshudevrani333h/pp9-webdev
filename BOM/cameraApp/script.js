@@ -11,13 +11,17 @@ let scale_ = document.querySelector(".scale");
 let zoom_in = scale_.querySelector(".zoom-in")
 let zoom_out = scale_.querySelector(".zoom-out")
 let reset = document.querySelector(".reset")
-let body = document.querySelector("body")
+// let body = document.querySelector("body")
 let filters = document.querySelectorAll(".f")
 let camera_container= document.querySelector(".camera-container") 
 let currentzoom =1;
 let maxzoom =3;
 let minzoom =1;
+let gallary = document.querySelector("#gallary")
 
+gallary.addEventListener("click",function(){
+  location.assign("gallary.html");
+})
 reset.addEventListener("click",function(){
   currentzoom =1;
   video.style.transform = `scale(${currentzoom})`;
@@ -93,12 +97,14 @@ capture.addEventListener("click", function () {
   }
 
 
-  let a = document.createElement("a");
   let link = canvas.toDataURL();
-  a.href = link;
-  a.download = "img.jpg";
-  a.click();
-  a.remove();
+   addMedia(link,"image")
+  // let a = document.createElement("a");
+  // a.href = link;
+  // a.download = "img.jpg";
+  // a.click();
+  // a.remove();
+
 });
 
 navigator.mediaDevices
@@ -117,12 +123,14 @@ navigator.mediaDevices
       let blob = new Blob(chunks, { type: "video/mp4" });
       // console.log(chunks);
       chunks = [];
-      let a = document.createElement("a");
-      let url = window.URL.createObjectURL(blob);
-      a.href = url;
-      a.download = "file.webm";
-      a.click();
-      a.remove();
+       addMedia(blob,"video")
+      // let url = window.URL.createObjectURL(blob);
+      // let a = document.createElement("a");
+      // a.href = url;
+      // a.download = "file.webm";
+      // a.click();
+      // a.remove();
+
     });
   });
 

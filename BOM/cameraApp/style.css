@@ -118,9 +118,19 @@ video{
     left: 94.5vw;
     color: black;
     font-weight: bold;
-    text-align: center;
+    
     background-color: azure;
+    font-size: 45px;
+    display: block;
+    text-align: center;
     z-index: 3;
+}
+
+#gallary{
+    height: 3rem;
+    right: 23px;
+    position: fixed;
+    bottom: 53px;
 }
 
 .record-anim{
