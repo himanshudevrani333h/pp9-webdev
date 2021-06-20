@@ -41,8 +41,6 @@ function viewMedias() {
 
   let curserReq = requiredObjStore.openCursor();
 
-  //   let oldLi = ul.querySelectorAll("li");
-  //   for (let i = 0; i < oldLi.length; i++) oldLi[i].remove();
 
   curserReq.addEventListener("success", function () {
     let cursor = curserReq.result;
