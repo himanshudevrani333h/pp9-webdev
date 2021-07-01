@@ -1,61 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a06663107e.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a06663107e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-    <div class="container">
-        <div class="navigation">
-            <div class="filter-container">
-                <div class="filter">
-                    <div class="pink-color-btn"></div>
-                </div>
-                <div class="filter">
-                    <div class="blue-color-btn"></div>
-                </div>
-                <div class="filter">
-                    <div class="green-color-btn"></div>
-                </div>
-                <div class="filter">
-                    <div class="black-color-btn"></div>
-                </div>
-            </div>
-            <div class="action-bar">
-                <div class="add">
-                    <i class="fas fa-plus"></i>
-                </div>
-                <div class="remove">
-                    <i class="fas fa-trash"></i>
-                </div>
-            </div>
-        </div>
-        <div class="grid">
-            <!-- <div class="ticket">
-                <div class="ticket-color"></div>
-                <div class="ticket-id">#dgjsk</div>
-                <div class="ticket-box" contenteditable></div>
-            </div> -->
-        </div>
+  <body>
+    <div class="login-container">
+      <h2>Authenticate</h2>
+      <input
+        class="email"
+        type="email"
+        multiple
+        placeholder="sophie@example.com"
+        required
+      />
+      <button class="otp">getotp</button>
+      <input class="otp_ent" placeholder="Enter OTP" />
+      <div class="verify">Verify</div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
-    <!-- <div class="modal-container">
-        <div class="writing-area" contenteditable></div>
-        <div class="filter-area">
-            <div class="modal-filter pink"></div>
-            <div class="modal-filter blue"></div>
-            <div class="modal-filter green"></div>
-            <div class="modal-filter black"></div>
-        </div>
-    </div> -->
-</body>
-
+  </body>
 </html>

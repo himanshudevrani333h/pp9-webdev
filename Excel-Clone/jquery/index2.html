@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .some_class{
+            height: 3rem;
+            border: 1px solid;
+            background-color: rgb(90, 9, 9);
+            color:white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nobis.</li>
+    </ul>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"
+  ></script>
+
+    <script>
+        $("li").click(function(e){
+            console.log("clixk")
+            if(e.detail == 1){
+              console.log(e.detail);
+            //   console.log(e.data);
+              e.currentTarget.classList.add("some_class");
+          }
+
+          if(e.detail == 2){
+              e.currentTarget.classList.remove("some_class");
+          }
+          if(e.detail == 3){
+              e.currentTarget.remove();
+          }
+        })
+    </script>
+</body>
+</html>

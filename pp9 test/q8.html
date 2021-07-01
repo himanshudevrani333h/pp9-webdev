@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Capturing</title>
+  <style>
+    * {
+      box-sizing: border-box;
+     }
+
+    .name {
+      width: 10rem;
+      border: 1px solid;
+      margin-left: 8rem;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <button>SAY HI</button>
+  <label> Enter your Name below before clicking on button:</label>
+  <div class="name" contenteditable></div>
+  <!-- Q- Right now on click of this button it says hello to user but it does not know the name of user so before saying hello
+       ask the user for his/her name. -->
+  <script>
+    // Given Code :
+    let name = document.querySelector(".name");
+
+    let b = document.querySelector("button");
+    b.addEventListener("click", function () {
+      if (name.innerText == "") {
+        alert("please enter your name")
+      } else
+        alert("Hello " + name.innerText);
+    });
+
+
+  </script>
+</body>
+
+</html>
