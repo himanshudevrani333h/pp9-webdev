@@ -56,14 +56,14 @@ body {
     height: 6%;
     width: 100%;
     position: relative;
-    z-index: 5;
+    z-index: 4;
 }
 
 .formula-bar {
   height: 4%;
   width: 100%;
   position: relative;
-  z-index: 5;
+  z-index: 4;
 }
 
 .formula-bar input {
@@ -137,7 +137,7 @@ body {
   position: fixed;
   top: 17.5vh;
   left: 0;
-  z-index: 5;
+  z-index: 4;
 }
 
 .column-tags {
