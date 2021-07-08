@@ -56,7 +56,7 @@ centerAlignBtn.addEventListener("click",function(){
 fontColorBtn.addEventListener("click", function () {
   let colorPicker = document.createElement("input");
   colorPicker.type = "color";
-
+  colorPicker.classList.add("cp")
   colorPicker.addEventListener("change", function (e) {
     oldCell.style.color = e.currentTarget.value;
     let address = oldCell.getAttribute("data-address");
@@ -67,17 +67,21 @@ fontColorBtn.addEventListener("click", function () {
 });
 
 backgroundColorBtn.addEventListener("click", function () {
+  let div = document.createElement("div")
+  div.classList.add("cpdiv")
   let colorPicker = document.createElement("input");
   colorPicker.type = "color";
-
+  colorPicker.classList.add("cp")
+  div.append(colorPicker)
+  body.append(div)
   colorPicker.addEventListener("change", function (e) {
     oldCell.style.backgroundColor = e.currentTarget.value;
     let address = oldCell.getAttribute("data-address");
     dataObj[address].backgroundColor = e.currentTarget.value;
-
+    
     console.log(dataObj[address]);
   });
-
+  
   colorPicker.click();
 });
 
