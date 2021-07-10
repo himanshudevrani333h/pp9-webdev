@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    height: 100vh;
+    background-color: black;
+}
+
+
+
+
+#record,#capture{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: black;
+    outline: none;
+    border: none;
+    position: fixed;
+    border: 5px solid white;
+    z-index: 3;
+}
+
+#record{
+    top: 60vh;
+    left: 90rem;
+
+} 
+
+#capture{
+    top:40vh;
+    left:90rem;
+}
+
+#record div{
+    margin: auto;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: red;
+}
+
+#capture div{
+    margin: auto;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: white;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+
+
+.camera-container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.filters{
+    height: 45rem;
+    width: 12rem;
+    border: 1px solid white;
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 3;
+}
+
+.f{
+    height: calc( 100% / 6);
+    width: 100%;
+    border: 1px solid white;
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg");
+    background-size: cover;
+}
+
+
+
+.filter-div{
+    height: 100%;
+    width: 100%;
+    top: 0rem;
+    position:fixed;
+    
+}
+
+.scale{
+    height: 8.5rem;
+    width: 5rem;
+    position: fixed;
+    top: 2rem;
+    left: 93.5vw;
+    color: black;
+    z-index: 3;
+}
+
+.zoom-in,.zoom-out{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    background-color:azure;
+    outline: none;
+}
+
+.reset{
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid white;
+    position: fixed;
+    top: 12rem;
+    left: 94.5vw;
+    color: black;
+    font-weight: bold;
+    
+    background-color: azure;
+    font-size: 45px;
+    display: block;
+    text-align: center;
+    z-index: 3;
+}
+
+#gallary{
+    height: 3rem;
+    right: 23px;
+    position: fixed;
+    bottom: 53px;
+}
+
+.record-anim{
+    animation: zoom-in-out .8s infinite ;
+}
+
+.capture-anim{
+    animation: zoom-in-out .8s;
+}
+
+
+@keyframes zoom-in-out {
+    0%{
+        transform: scale(1);
+    }
+    
+    50%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}

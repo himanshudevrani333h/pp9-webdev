@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        /* margin: 0; */
+        display: flex;
+        flex-wrap: wrap;
+        padding: 16px;
+        justify-content: space-evenly;
+        background-color: black;
+      }
+
+      .lightbox {
+        height: 24rem;
+        width: 28rem;
+        /* border: 1px solid; */
+      }
+      .row {
+        /* border: 1px solid; */
+        height: 100%;
+        width: 100%;
+      }
+      .col-lg-6 {
+        height: 80%;
+        width: 100%;
+      }
+      img,
+      video {
+        height: 100%;
+      }
+      .btn {
+        width: 100%;
+        /* border: 1px solid rebeccapurple; */
+      }
+      .btn.btn-primary.btn-lg {
+        width: 8rem;
+        text-align: center;
+      }
+
+      .btn.btn-secondary.btn-lg {
+        width: 8rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container" style="font-weight:bold;">GAlLaRY</div>
+    <div class="media-container">
+        <div class="media">
+            <video src="" autoplay loop controls muted></video>
+        </div>
+        <button class="download"></button>
+        <button class="delete"></button>
+    </div> -->
+
+    <!-- Gallery -->
+
+    <!-- <div class="row">
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+    </div>
+    <button class="download"></button>
+    <button class="delete"></button>
+  
+  </div>
+
+  
+</div> -->
+    <!-- Gallery -->
+
+    <!--<div class="lightbox">
+   <div class="row">
+    <div class="col-lg-6">
+      <img
+        src="https://mdbootstrap.com/img/Photos/Thumbnails/Square/1.jpg"
+        alt="Lightbox image 2"
+        class="w-100 shadow-1-strong rounded"
+      />
+    </div>
+  </div>
+</div> -->
+
+    <script src="gallaryScript.js"></script>
+
+    <script>
+      setTimeout(function () {
+        viewMedias();
+      }, 100);
+    </script>
+  </body>
+</html>
