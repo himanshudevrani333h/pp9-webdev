@@ -1,0 +1,3 @@
+!imortant each row contains 12 col 
+ and we can specify how much col we want to give to a div tag inside a row if the no goes hogher than 12 then the last div will automatically will come to the next line
+ 
