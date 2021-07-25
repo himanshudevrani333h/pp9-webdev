@@ -1,0 +1,15 @@
+.activity{
+   
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.msg{
+    background-color: green;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top:0;
+    width: 8rem;
+    left: 50%;
+}
