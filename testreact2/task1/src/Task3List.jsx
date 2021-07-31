@@ -1,26 +1,24 @@
 import { useState, useEffect } from "react";
 let Task3List = (props) => {
-  let [state, setState] = useState([]);
+  let [state, setState] = useState({});
 
   let link = "https://restcountries.eu/rest/v2/capital/" + props.capital;
   useEffect(() => {
-    fetch(link)
-      .then((e) => {
-        return e;
-      })
-      .then((res) => {
-        console.log(res);
-        setState(res);
-      });
-  }, [link]);
+    let f = async ()=>{
+     let data = await fetch("https://restcountries.eu/rest/v2/capital/")
+     
+     setState(data.json());
+     console.log(state.name);
+    }
+
+    f();
+  },[props.capital]);
 
   if (!state) return <h1>loading..</h1>;
 
   return (
     <ul>
-      {state.map((e) => {
-        return <li>{e.name}</li>;
-      })}
+     <li>{state.name}</li>
     </ul>
   );
 };
