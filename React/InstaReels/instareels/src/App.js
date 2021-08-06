@@ -1,37 +1,33 @@
 // import { firestore } from "./firebase";
 import Login from "./Login";
-import {useState} from "react"
+import { createContext, useState } from "react";
 import Home from "./Home";
 
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-let App = ()=>{
+let usercontext = createContext();
+let App = () => {
+  let [user, setUser] = useState(null);
 
-  let [user,setUser] = useState(null);
+  let userHandler = (user) => setUser(user);
 
-  let userHandler = (user)=> setUser(user);
-  // useEffect(() => {
-  //   let f = async ()=>{
-  //     let querySnapshot = await firestore.collection("posts").limit(5).orderBy("index","desc").get();
-  //     querySnapshot.forEach((e)=> console.log(e.data()))
-  //   }
-  //   f();
-  // }, [])
+  return (
+    <>
+      <Router>
+        <usercontext.Provider value={user}>
+          <Switch>
+            <Route path="/home">
+              <Home  />
+            </Route>
+            <Route path="/">
+              <Login userhandler={userHandler} />
+            </Route>
+          </Switch>
+        </usercontext.Provider>
+      </Router>
+    </>
+  );
+};
 
-  return(<>
-    <Router>
-      <Switch>
-        <Route path="/login">
-          <Login userhandler ={userHandler} user = {user}/>
-        </Route>
-        <Route path ="/home">
-          <Home user = {user}/>
-        </Route>
-      </Switch>
-    </Router>
-  </>
-
-  )
-}
-
+export  {usercontext};
 export default App;
