@@ -1,22 +1,52 @@
-import { useState } from "react";
-let VideoCard = () => {
+import { useState, useContext, useEffect } from "react";
+import { AuthContext } from "./AuthProvider";
+import { firestore } from "./firebase";
+import "./home.css"
+let VideoCard = (props) => {
+  let value = useContext(AuthContext);
+
   let [cmntbox, setbox] = useState(false);
-  let [palyVideo,setVideo] = useState(false);
+  let [palyVideo, setVideo] = useState(false);
+  let [currentUserComment, setCurrentUserComment] = useState("");
+  let [allComments, setAllComments] = useState([]);
+
+  useEffect(() => {
+    let f = async () => {
+      let allCommentId = props.post.comments;
+      let arr = [];
+
+      for (let i = 0; i < allCommentId.length; i++) {
+        let id = allCommentId[i];
+
+        let doc = await firestore.collection("comments").doc(id).get();
+        let commentData = { ...doc.data(), id: doc.id };
+        arr.push(commentData);
+      }
+
+      setAllComments(arr);
+    };
+
+    f();
+  }, [props]);
+
   return (
     <div className="video-card">
-      <video src="https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4" onClick={(e)=>{
-          if(palyVideo){
-              setVideo(false);
-              e.currentTarget.pause();
-          }else{
-              
+      {console.log(props.posts)}
+      <video
+        src={props.post.url}
+        onClick={(e) => {
+          if (palyVideo) {
+            setVideo(false);
+            e.currentTarget.pause();
+          } else {
             setVideo(true);
             e.currentTarget.play();
           }
-      }}/>
-      <span class="material-icons-outlined like">favorite_border</span>
+        }}
+      />
+      <span className="material-icons-outlined like">favorite_border</span>
       <span
-        class="material-icons-outlined comment"
+        className="material-icons-outlined comment"
         onClick={() => {
           if (cmntbox) setbox(false);
           else setbox(true);
@@ -25,7 +55,7 @@ let VideoCard = () => {
         chat_bubble
       </span>
       <p className="username">
-        <b>@username</b>
+        <b>{props.post.username}</b>
       </p>
       <p className="song">
         <marquee>song name</marquee>
@@ -35,16 +65,58 @@ let VideoCard = () => {
           <button
             className="comment-box-close-btn"
             onClick={() => {
-                setbox(false);
+              setbox(false);
             }}
           >
             Close
           </button>
 
-          <div className="all-comments"></div>
+          <div className="all-comments">
+          {allComments.map((comment, index) => {
+              return (
+                <div key={index}>
+                  <img src={comment.pic} />
+                  <div>
+                    <p>
+                      <b>{comment.username}</b>
+                    </p>
+                    <p className="inner-comment">{comment.comment}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
           <div className="comment-form">
-            <input />
-            <button>Post</button>
+            <input
+              value={currentUserComment}
+              onChange={(e) => {
+                setCurrentUserComment(e.currentTarget.value);
+              }}
+            />
+            <button
+              onClick={() => {
+                let p = firestore.collection("comments").add({
+                  comment: currentUserComment,
+                  username: value.displayName,
+                  pic: value.photoURL,
+                });
+
+                setCurrentUserComment("");
+
+                p.then((docRef) => {
+                  return docRef.get();
+                }).then((doc) => {
+                  firestore
+                    .collection("posts")
+                    .doc(props.post.id)
+                    .update({
+                      comments: [...props.post.comments, doc.id],
+                    });
+                });
+              }}
+            >
+              Post
+            </button>
           </div>
         </div>
       ) : (

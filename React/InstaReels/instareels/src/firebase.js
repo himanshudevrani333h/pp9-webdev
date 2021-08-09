@@ -2,7 +2,7 @@ import firebase from "firebase";
 import "firebase/firestore"
 // step 1
 import "firebase/auth"
-
+import "firebase/storage"
 const firebaseConfig = {
     apiKey: "AIzaSyBpjBy7o0jQMYI-3ODYyHZMFZoMWLpeJ0k",
     authDomain: "reels-afe60.firebaseapp.com",
@@ -18,7 +18,7 @@ export const firestore = firebase.firestore();
 
 // step 2
 export const auth = firebase.auth()
-
+export const storage = firebase.storage();
 //Step 3=> firebase console; enable google login in auth panel
 
 //Step 4
