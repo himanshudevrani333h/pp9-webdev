@@ -1,5 +1,5 @@
 import { auth, storage, firestore } from "./firebase";
-import { Redirect } from "react-router-dom";
+import { Redirect,Link } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 
 import { useContext, useState, useEffect } from "react";
@@ -47,7 +47,9 @@ let Home = (props) => {
           >
             Logout
           </button>
-
+          <Link to="/profile">
+            <button id="profile">Profile</button>
+          </Link>
           <input
             onChange={(e) => {
               if (!e.target.files[0]) return;
