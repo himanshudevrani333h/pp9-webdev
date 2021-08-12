@@ -29,9 +29,26 @@ let Home = (props) => {
     };
   }, []);
   return (
-    <div>
+    <div className="post_div">
       {value ? (
         <>
+          <span
+            className="material-icons-outlined info"
+            onClick={() => {
+              let bd = document.querySelector(".post_div");
+              let od = document.createElement("div");
+              od.classList.add("outer-info-box");
+              od.innerText = "To upload a video hover to the middle bottom!";
+              bd.append(od);
+
+              setTimeout(() => {
+                od.remove();
+              }, 2000);
+            }}
+          >
+            info
+          </span>
+
           <div className="posts-container">
             <h1 className="tag">Reels</h1>
             {console.log(posts)}
@@ -46,11 +63,11 @@ let Home = (props) => {
               auth.signOut();
             }}
           >
-            <span class="material-icons-outlined lgt">logout</span>
+            <span className="material-icons-outlined lgt">logout</span>
           </button>
           <Link to="/profile">
             <button id="profile">
-              <span class="material-icons-outlined">account_circle</span>
+              <span className="material-icons-outlined">account_circle</span>
             </button>
           </Link>
 
@@ -125,7 +142,7 @@ let Home = (props) => {
             // style={{display: "none"}}
           />
           <label htmlFor={"upload-btn"}>
-            <span class="material-icons-outlined upbtn">add_circle</span>
+            <span className="material-icons-outlined upbtn">add_circle</span>
           </label>
         </>
       ) : (

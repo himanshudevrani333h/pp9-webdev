@@ -26,6 +26,7 @@
   left: 1rem;
   font-size: 5rem;
   font-family: cursive;
+  color: black;
 }
 .material-icons-outlined {
   font-size: 4rem;
@@ -178,4 +179,28 @@ img {
   width: 5rem;
   border: 1px solid;
   visibility: visible;
+}
+
+.info {
+  position: fixed;
+  top: 84px;
+  right: 3.5rem;
+  font-size: 58px;
+}
+
+.outer-info-box {
+  height: 5rem;
+  width: 13rem;
+  position: fixed;
+  top: 146px;
+  right: 2.5rem;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+  background-color: #4cd137;
+  color: white;
+  border-radius: 5px;
+  padding: 2.1px;
+  display: flex;
 }
