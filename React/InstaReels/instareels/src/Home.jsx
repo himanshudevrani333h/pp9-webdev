@@ -1,5 +1,5 @@
 import { auth, storage, firestore } from "./firebase";
-import { Redirect,Link } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 
 import { useContext, useState, useEffect } from "react";
@@ -11,7 +11,7 @@ let Home = (props) => {
 
   useEffect(() => {
     let unsubscribeSnapshot;
-    unsubscribeSnapshot= firestore
+    unsubscribeSnapshot = firestore
       .collection("posts")
       .onSnapshot((querySnapshot) => {
         let arr = [];
@@ -33,10 +33,11 @@ let Home = (props) => {
       {value ? (
         <>
           <div className="posts-container">
-              {console.log(posts)}
-                {posts.map((el,index) => {
-                  return(<VideoCard key ={index} post={el} />);
-                })}
+            <h1 className="tag">Reels</h1>
+            {console.log(posts)}
+            {posts.map((el, index) => {
+              return <VideoCard key={index} post={el} />;
+            })}
           </div>
 
           <button
@@ -45,11 +46,14 @@ let Home = (props) => {
               auth.signOut();
             }}
           >
-            Logout
+            <span class="material-icons-outlined lgt">logout</span>
           </button>
           <Link to="/profile">
-            <button id="profile">Profile</button>
+            <button id="profile">
+              <span class="material-icons-outlined">account_circle</span>
+            </button>
           </Link>
+
           <input
             onChange={(e) => {
               if (!e.target.files[0]) return;
@@ -115,10 +119,14 @@ let Home = (props) => {
               // upload
               e.target.value = null;
             }}
-            className="upload-btn"
+            id={"upload-btn"}
             type="file"
             accept="video/mp4,video/x-m4v,video/*"
+            // style={{display: "none"}}
           />
+          <label htmlFor={"upload-btn"}>
+            <span class="material-icons-outlined upbtn">add_circle</span>
+          </label>
         </>
       ) : (
         <Redirect to="/" />

@@ -3,12 +3,11 @@ import { Redirect } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import { firestore } from "./firebase";
 
-import "./Profile.css"
-
+import "./Profile.css";
 
 let Profile = () => {
   let value = useContext(AuthContext);
-  let [totalPosts, setTotalPosts] = useState(0);
+  let [totalPosts, setTotalPosts] = useState([""]);
 
   console.log(value);
 
@@ -19,8 +18,11 @@ let Profile = () => {
         .where("username", "==", value.displayName)
         .get();
 
-      console.log("size", querySnapshot.size);
-      setTotalPosts(querySnapshot.size);
+      let arr = [];
+      querySnapshot.forEach((doc) => {
+        arr.push(doc.data().url);
+      });
+      setTotalPosts(arr);
     };
 
     f();
@@ -30,9 +32,17 @@ let Profile = () => {
     <>
       {value ? (
         <div>
-          <img className="img-profile" src={value.photoURL}/>
+          <img className="img-profile" src={value.photoURL} />
           <p className="username-profile">{value.displayName}</p>
-          <p className="ttpost">Total Posts: {totalPosts}</p>
+          <div className="post-container">
+            {totalPosts.map((el) => {
+              return (
+               <div className="crd">
+                 <video autoplay src={el}/>
+                 </div>
+              );
+            })}
+          </div>
         </div>
       ) : (
         <Redirect to="/login" />

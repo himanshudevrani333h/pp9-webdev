@@ -1,0 +1,22 @@
+.my-container {
+    height: 24rem;
+    width: 19rem;
+    margin-top: calc(50vh - 12rem);
+    margin-left: 40.5rem;
+    background: #c2e59c;
+    background: linear-gradient( to right, #64b3f4, #c2e59c );
+    box-shadow: 5px 9px #888888;
+    border-radius: 10px;
+}
+.reelsheading {
+  font-family: cursive;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}
+.login {
+  align-items: center;
+  width: 16rem;
+  margin-top: 5rem;
+  margin-left: 1.38rem; 
+}

@@ -1,37 +1,60 @@
-
-  
 .logout-btn {
   position: fixed;
-  bottom: 8rem;
-  right: 2rem;
+  bottom: 2rem;
+  right: 3rem;
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
   border: none;
+  background: none;
 }
 
 #profile {
   position: fixed;
-  bottom: 15rem;
-  right: 2rem;
+  bottom: 43rem;
+  right: 4rem;
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
   border: none;
+  background: none;
+  align-items: center;
 }
 
-.upload-btn {
+.tag {
   position: fixed;
-  bottom: 3rem;
-  right: 2rem;
+  left: 1rem;
+  font-size: 5rem;
+  font-family: cursive;
+}
+.material-icons-outlined {
+  font-size: 4rem;
+  color: gray;
+}
+#upload-btn {
+  display: none;
+}
+.upbtn {
+  color: white;
+  font-size: 4rem;
+}
+label {
+  position: fixed;
+  bottom: 32px;
+  right: 44rem;
   width: 6rem;
-  display: block;
+  height: 2rem;
+  opacity: 0;
+}
+
+label:hover {
+  opacity: 1;
 }
 
 .posts-container {
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: white;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
@@ -47,7 +70,14 @@
 
 .like {
   font-size: 40px;
-  color: #d63031;
+  color: white;
+  position: absolute;
+  bottom: 20vh;
+  right: 10px;
+}
+.liked {
+  font-size: 40px;
+  color: red;
   position: absolute;
   bottom: 20vh;
   right: 10px;
@@ -58,6 +88,7 @@
   position: absolute;
   bottom: 14vh;
   right: 10px;
+  color: white;
 }
 
 .username {
@@ -81,12 +112,12 @@ video {
 }
 
 .comment-box {
-  border: 1px solid;
   height: 45%;
   width: 100%;
   background: white;
   position: absolute;
   bottom: 0;
+  z-index: 2;
 }
 
 .comment-box-close-btn {
@@ -102,7 +133,6 @@ video {
   margin-top: 4.5vh;
   height: 80%;
   width: 100%;
-  border: 1px solid black;
   color: black;
 }
 
@@ -143,3 +173,9 @@ img {
   margin-top: -1rem;
 }
 
+#wrp {
+  height: 5rem;
+  width: 5rem;
+  border: 1px solid;
+  visibility: visible;
+}

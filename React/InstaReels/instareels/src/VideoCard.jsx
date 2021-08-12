@@ -44,7 +44,20 @@ let VideoCard = (props) => {
           }
         }}
       />
-      <span className="material-icons-outlined like">favorite_border</span>
+      <button>
+      <span className="material-icons-outlined like" onClick={(e)=>{
+        console.log(e);
+        if(e.currentTarget.innerHTML == "favorite_border"){
+          e.currentTarget.innerHTML = "favorite";
+          e.currentTarget.classList.add("liked");
+        }else{
+          e.currentTarget.innerHTML = "favorite_border"
+          e.currentTarget.classList.remove("liked");
+
+        }
+      }}>favorite_border</span>
+      </button>
+      <button>
       <span
         className="material-icons-outlined comment"
         onClick={() => {
@@ -54,6 +67,7 @@ let VideoCard = (props) => {
       >
         chat_bubble
       </span>
+      </button>
       <p className="username">
         <b>{props.post.username}</b>
       </p>
@@ -87,7 +101,7 @@ let VideoCard = (props) => {
             })}
           </div>
           <div className="comment-form">
-            <input
+            <input placeholder="Type your comment here..."
               value={currentUserComment}
               onChange={(e) => {
                 setCurrentUserComment(e.currentTarget.value);

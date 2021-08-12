@@ -2,19 +2,30 @@
     display: block;
     margin: auto;
     margin-top: 2rem;
-    height: 20rem;
-    width: 20rem;
+    height: 10rem;
+    width: 10rem;
   }
   
   
   .username-profile{
-      text-align: center;
-      padding-top: 3rem;
-      font-size: 3rem;
-      font-weight: 100;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
   }
   
-  .ttpost{
-      text-align: center;
-      font-size: 2rem;
+ 
+
+  .post-container{
+    height: 31rem;
+    width: 76vw;
+    padding: 2px;
+    margin-left: 12vw;
+    display: flex;
+  }
+  .crd{
+    height: 20rem;
+    width: 13rem;
+    border-radius: 5px;
+    padding: 5px;
   }
