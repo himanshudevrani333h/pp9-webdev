@@ -14,6 +14,20 @@ let boldbtn = buiSpans[0];
 let italicbtn = buiSpans[1];
 let underline = buiSpans[2];
 
+let fontstyle = document.querySelector("#cell-font-family")
+console.log(fontstyle.value);
+fontstyle.addEventListener("change",(e)=>{
+console.log(e.currentTarget.value);
+oldCell.style.fontFamily = e.currentTarget.value;
+})
+
+let fontsize =  document.querySelector("#cell-font-size")
+fontsize.addEventListener("change",(e)=>{
+  console.log(e.currentTarget.value);
+  oldCell.style.fontSize = `${e.currentTarget.value}px`
+})
+
+
 boldbtn.addEventListener("click",function(e){
     oldCell.style.fontWeight = "bold"
     let address = oldCell.getAttribute("data-address")
@@ -53,27 +67,32 @@ centerAlignBtn.addEventListener("click",function(){
 
 
 
-fontColorBtn.addEventListener("click", function () {
+fontColorBtn.addEventListener("click", function (e) {
+  if(document.querySelector(".cpf")) document.querySelector(".cpf").remove();
   let colorPicker = document.createElement("input");
   colorPicker.type = "color";
-  colorPicker.classList.add("cp")
+  colorPicker.classList.add("cpf")
+  fontColorBtn.append(colorPicker)
+// e.currentTarget.preventDefault();
+  colorPicker.click();
+
   colorPicker.addEventListener("change", function (e) {
     oldCell.style.color = e.currentTarget.value;
     let address = oldCell.getAttribute("data-address");
     dataObj[address].fontColor = e.currentTarget.value;
+    colorPicker.remove();
   });
 
-  colorPicker.click();
 });
 
 backgroundColorBtn.addEventListener("click", function () {
-  let div = document.createElement("div")
-  div.classList.add("cpdiv")
+  if(document.querySelector(".cpb")) document.querySelector(".cpb").remove();
+
   let colorPicker = document.createElement("input");
   colorPicker.type = "color";
-  colorPicker.classList.add("cp")
-  div.append(colorPicker)
-  body.append(div)
+  colorPicker.classList.add("cpb")
+ 
+  backgroundColorBtn.append(colorPicker)
   colorPicker.addEventListener("change", function (e) {
     oldCell.style.backgroundColor = e.currentTarget.value;
     let address = oldCell.getAttribute("data-address");

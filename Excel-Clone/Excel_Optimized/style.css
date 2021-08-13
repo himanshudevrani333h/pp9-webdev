@@ -216,14 +216,13 @@ body {
   color: black;
 }
 
-.cpdiv{
-  position: relative;
-  margin-left: 10rem;
-  z-index: 5;
+
+
+.cpf{
+  position: fixed;
+  top:10;
 }
-.cp{
-  position: absolute; 
-  z-index:1;
-  top: 10rem; 
-  left: 20px;
+.cpb{
+  position: fixed;
+  top:10;
 }
