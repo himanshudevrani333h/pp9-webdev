@@ -141,6 +141,7 @@ for (let i = 1; i <= 100; i++) {
 }
 
 $(".cell").click(function (e) {
+  
   //check kro koi old cell hai kya pehli se selected
   if (oldCell) {
     // agr han to use deselect kro class remove krke
@@ -158,8 +159,11 @@ $(".cell").click(function (e) {
 });
 
 $(".cell").on("input", function (e) {
+  
   // console.log(e.currentTarget.innerText);
   let address = e.currentTarget.getAttribute("data-address");
+  console.log(`upstream" ${dataObj[address].upstream}`);
+  console.log(`downstream  ${dataObj[address].downstream}`);
   dataObj[address].value = Number(e.currentTarget.innerText);
 
   dataObj[address].formula = "";

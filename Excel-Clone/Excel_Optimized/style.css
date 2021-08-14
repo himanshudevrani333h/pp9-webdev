@@ -217,12 +217,19 @@ body {
 }
 
 
-
-.cpf{
-  position: fixed;
-  top:10;
+.font-fill,.bg-fill{
+  position: relative;
+  cursor: pointer;
 }
-.cpb{
-  position: fixed;
-  top:10;
+
+
+.font-text,.font-bg{
+  position: absolute;
+  border: none;
+  width: 23px;
+  height: 2px;
+  top: 33px;
+  padding: 0;
+  background-color: black;
+  cursor: pointer;
 }
