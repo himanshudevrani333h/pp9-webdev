@@ -1,12 +1,12 @@
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "./AuthProvider";
 import { firestore } from "./firebase";
-import "./home.css"
+import "./home.css";
 let VideoCard = (props) => {
   let value = useContext(AuthContext);
 
   let [cmntbox, setbox] = useState(false);
-  let [palyVideo, setVideo] = useState(false);
+
   let [currentUserComment, setCurrentUserComment] = useState("");
   let [allComments, setAllComments] = useState([]);
 
@@ -31,42 +31,42 @@ let VideoCard = (props) => {
 
   return (
     <div className="video-card">
-      {console.log(props.posts)}
       <video
+        className="video_file"
         src={props.post.url}
         onClick={(e) => {
-          if (palyVideo) {
-            setVideo(false);
+          if (!e.currentTarget.paused) {
             e.currentTarget.pause();
-          } else {
-            setVideo(true);
-            e.currentTarget.play();
-          }
+          } else e.currentTarget.play();
         }}
       />
       <button>
-      <span className="material-icons-outlined like" onClick={(e)=>{
-        console.log(e);
-        if(e.currentTarget.innerHTML == "favorite_border"){
-          e.currentTarget.innerHTML = "favorite";
-          e.currentTarget.classList.add("liked");
-        }else{
-          e.currentTarget.innerHTML = "favorite_border"
-          e.currentTarget.classList.remove("liked");
-
-        }
-      }}>favorite_border</span>
+        <span
+          className="material-icons-outlined like"
+          onClick={(e) => {
+            console.log(e);
+            if (e.currentTarget.innerHTML == "favorite_border") {
+              e.currentTarget.innerHTML = "favorite";
+              e.currentTarget.classList.add("liked");
+            } else {
+              e.currentTarget.innerHTML = "favorite_border";
+              e.currentTarget.classList.remove("liked");
+            }
+          }}
+        >
+          favorite_border
+        </span>
       </button>
       <button>
-      <span
-        className="material-icons-outlined comment"
-        onClick={() => {
-          if (cmntbox) setbox(false);
-          else setbox(true);
-        }}
-      >
-        chat_bubble
-      </span>
+        <span
+          className="material-icons-outlined comment"
+          onClick={() => {
+            if (cmntbox) setbox(false);
+            else setbox(true);
+          }}
+        >
+          chat_bubble
+        </span>
       </button>
       <p className="username">
         <b>{props.post.username}</b>
@@ -86,7 +86,7 @@ let VideoCard = (props) => {
           </button>
 
           <div className="all-comments">
-          {allComments.map((comment, index) => {
+            {allComments.map((comment, index) => {
               return (
                 <div key={index}>
                   <img src={comment.pic} />
@@ -101,7 +101,8 @@ let VideoCard = (props) => {
             })}
           </div>
           <div className="comment-form">
-            <input placeholder="Type your comment here..."
+            <input
+              placeholder="Type your comment here..."
               value={currentUserComment}
               onChange={(e) => {
                 setCurrentUserComment(e.currentTarget.value);

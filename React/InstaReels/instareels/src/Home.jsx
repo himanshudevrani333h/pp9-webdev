@@ -28,6 +28,35 @@ let Home = (props) => {
       unsubscribeSnapshot();
     };
   }, []);
+
+
+  useEffect(()=>{
+    const myobserver = new IntersectionObserver((elements)=>{
+
+     elements.forEach((el)=>{
+       console.log(el.target.paused);
+       console.log(el.intersectionRatio);
+       if( el.intersectionRatio !== 1 && !el.target.paused ){
+         console.log("not fuly display");
+        el.target.pause();
+       }else {
+        console.log(" fuly display");
+         el.target.play();
+         el.target.loop = true;
+        // ispaused = false;
+       }
+     })
+    },{threshold:1})
+
+    const videoEle = document.querySelectorAll("video");
+    // console.log(videoEle);
+      if(videoEle != null){
+    videoEle.forEach((el)=>{
+      myobserver.observe(el);
+    })
+  }
+  })
+ 
   return (
     <div className="post_div">
       {value ? (
@@ -144,7 +173,9 @@ let Home = (props) => {
           <label htmlFor={"upload-btn"}>
             <span className="material-icons-outlined upbtn">add_circle</span>
           </label>
+          
         </>
+        
       ) : (
         <Redirect to="/" />
       )}
