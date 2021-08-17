@@ -4,7 +4,8 @@ import { firestore } from "./firebase";
 import "./home.css";
 let VideoCard = (props) => {
   let value = useContext(AuthContext);
-
+  
+  let [likecount,setlike] = useState();
   let [cmntbox, setbox] = useState(false);
 
   let [currentUserComment, setCurrentUserComment] = useState("");
@@ -29,6 +30,52 @@ let VideoCard = (props) => {
     f();
   }, [props]);
 
+  useEffect(() => {
+     let f = async ()=>{
+       firestore.collection("posts").doc(`${props.post.id}`).onSnapshot((querysnapshot)=>{
+         let  like = querysnapshot.data().likes;
+         console.log(like);
+         setlike(like);
+       });
+      }
+      f();
+    
+  },[]);
+
+
+  useEffect(()=>{
+    let observeConfig = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1,
+    };
+    const myobserver = new IntersectionObserver((elements)=>{
+
+     elements.forEach((el)=>{
+       console.log(el.target.paused);
+       console.log(el.intersectionRatio);
+       if( el.intersectionRatio !== 1 && !el.target.paused ){
+         console.log("not fuly display");
+        el.target.pause()
+       }else {
+        console.log(" fuly display");
+        console.log(el.target.play())
+         el.target.play()
+         el.target.loop = true;
+        // ispaused = false;
+       }
+     })
+    },observeConfig)
+
+    const videoEle = document.querySelector("video");
+    // console.log(videoEle);
+    //   if(videoEle != null){
+    // videoEle.forEach((el)=>{
+      myobserver.observe(videoEle);
+    // })
+  // }
+  },[])
+
   return (
     <div className="video-card">
       <video
@@ -39,8 +86,12 @@ let VideoCard = (props) => {
             e.currentTarget.pause();
           } else e.currentTarget.play();
         }}
+
+        autoPlay="true"
       />
       <button>
+      
+        <span className="likeCount">{likecount == 0 ? "": likecount}</span>
         <span
           className="material-icons-outlined like"
           onClick={(e) => {
@@ -48,14 +99,34 @@ let VideoCard = (props) => {
             if (e.currentTarget.innerHTML == "favorite_border") {
               e.currentTarget.innerHTML = "favorite";
               e.currentTarget.classList.add("liked");
+              likecount += 1;
+              firestore.collection("posts").doc(`${props.post.id}`).update({
+                likes:likecount,
+              })
+              let arr = [props.post.id];
+              firestore.collection("user").doc(value.uid).update({
+                posts:arr,
+              })
+                // el.docs.data().posts.push(props.posts.id);
+              
+              setlike(likecount);
+             
             } else {
               e.currentTarget.innerHTML = "favorite_border";
               e.currentTarget.classList.remove("liked");
+              if(likecount -1 >=0){
+                likecount -= 1;
+                firestore.collection("posts").doc(`${props.post.id}`).update({
+                  likes:likecount,
+                })
+              setlike(likecount);
+              }
             }
           }}
         >
           favorite_border
         </span>
+      
       </button>
       <button>
         <span

@@ -30,32 +30,38 @@ let Home = (props) => {
   }, []);
 
 
-  useEffect(()=>{
-    const myobserver = new IntersectionObserver((elements)=>{
+  // useEffect(()=>{
+  //   let observeConfig = {
+  //     root: null,
+  //     rootMargin: "0px",
+  //     threshold: [ 1],
+  //   };
+  //   const myobserver = new IntersectionObserver((elements)=>{
 
-     elements.forEach((el)=>{
-       console.log(el.target.paused);
-       console.log(el.intersectionRatio);
-       if( el.intersectionRatio !== 1 && !el.target.paused ){
-         console.log("not fuly display");
-        el.target.pause();
-       }else {
-        console.log(" fuly display");
-         el.target.play();
-         el.target.loop = true;
-        // ispaused = false;
-       }
-     })
-    },{threshold:1})
+  //    elements.forEach((el)=>{
+  //      console.log(el.target.paused);
+  //      console.log(el.intersectionRatio);
+  //      if( el.intersectionRatio !== 1 && !el.target.paused ){
+  //        console.log("not fuly display");
+  //       el.target.pause();
+  //      }else {
+  //       console.log(" fuly display");
+  //       console.log(el.target.play())
+  //        el.target.play();
+  //        el.target.loop = true;
+  //       // ispaused = false;
+  //      }
+  //    })
+  //   },observeConfig)
 
-    const videoEle = document.querySelectorAll("video");
-    // console.log(videoEle);
-      if(videoEle != null){
-    videoEle.forEach((el)=>{
-      myobserver.observe(el);
-    })
-  }
-  })
+  //   const videoEle = document.querySelectorAll("video");
+  //   // console.log(videoEle);
+  //     if(videoEle != null){
+  //   videoEle.forEach((el)=>{
+  //     myobserver.observe(el);
+  //   })
+  // }
+  // })
  
   return (
     <div className="post_div">
