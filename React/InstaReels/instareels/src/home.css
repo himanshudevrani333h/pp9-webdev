@@ -79,7 +79,7 @@ label:hover {
 }
 .liked {
   font-size: 40px;
-  color: red;
+  color: red !important;
   position: absolute;
   bottom: 20vh;
   right: 10px;

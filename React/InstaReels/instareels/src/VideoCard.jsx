@@ -10,7 +10,8 @@ let VideoCard = (props) => {
 
   let [currentUserComment, setCurrentUserComment] = useState("");
   let [allComments, setAllComments] = useState([]);
-
+  
+  let [savedlike, setsaved] = useState([]);
   useEffect(() => {
     let f = async () => {
       let allCommentId = props.post.comments;
@@ -42,39 +43,18 @@ let VideoCard = (props) => {
     
   },[]);
 
-
-  useEffect(()=>{
-    let observeConfig = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 1,
-    };
-    const myobserver = new IntersectionObserver((elements)=>{
-
-     elements.forEach((el)=>{
-       console.log(el.target.paused);
-       console.log(el.intersectionRatio);
-       if( el.intersectionRatio !== 1 && !el.target.paused ){
-         console.log("not fuly display");
-        el.target.pause()
-       }else {
-        console.log(" fuly display");
-        console.log(el.target.play())
-         el.target.play()
-         el.target.loop = true;
-        // ispaused = false;
-       }
-     })
-    },observeConfig)
-
-    const videoEle = document.querySelector("video");
-    // console.log(videoEle);
-    //   if(videoEle != null){
-    // videoEle.forEach((el)=>{
-      myobserver.observe(videoEle);
-    // })
-  // }
-  },[])
+ useEffect(()=>{
+   firestore.collection("users").doc(value.uid).onSnapshot((querysnapshot)=>{
+     let posts = querysnapshot.data().posts;
+    //  if(posts.includes(props.post.id)){
+    //    document.querySelector(".material-icons-outlined.like").classList.add("liked");
+    //  }
+     console.log(posts);
+     setsaved(posts)
+   })
+ },[])
+ 
+ 
 
   return (
     <div className="video-card">
@@ -87,9 +67,9 @@ let VideoCard = (props) => {
           } else e.currentTarget.play();
         }}
 
-        autoPlay="true"
+        autoPlay={true}
       />
-      <button>
+      <button className="likebtn">
       
         <span className="likeCount">{likecount == 0 ? "": likecount}</span>
         <span
@@ -103,12 +83,13 @@ let VideoCard = (props) => {
               firestore.collection("posts").doc(`${props.post.id}`).update({
                 likes:likecount,
               })
-              let arr = [props.post.id];
-              firestore.collection("user").doc(value.uid).update({
+              let arr = savedlike;
+              if (!arr.includes(props.post.id)) arr.push(props.post.id);
+              console.log(arr);
+              firestore.collection("users").doc(value.uid).update({
                 posts:arr,
               })
-                // el.docs.data().posts.push(props.posts.id);
-              
+              setsaved(arr)         
               setlike(likecount);
              
             } else {
@@ -119,12 +100,22 @@ let VideoCard = (props) => {
                 firestore.collection("posts").doc(`${props.post.id}`).update({
                   likes:likecount,
                 })
-              setlike(likecount);
+                let arr = savedlike;
+                let filteredarr = arr.filter((el)=>{
+                  return el != props.post.id;
+                })
+                console.log(arr);
+                firestore.collection("users").doc(value.uid).update({
+                  posts:filteredarr,
+                })
+                setsaved(filteredarr)
+                setlike(likecount);
               }
             }
           }}
         >
-          favorite_border
+         {savedlike.includes(props.post.id)?"favorite":"favorite_border"} 
+         
         </span>
       
       </button>
