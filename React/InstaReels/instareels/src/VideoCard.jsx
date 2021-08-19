@@ -73,7 +73,7 @@ let VideoCard = (props) => {
       
         <span className="likeCount">{likecount == 0 ? "": likecount}</span>
         <span
-          className="material-icons-outlined like"
+          className={savedlike.includes(props.post.id)?"material-icons-outlined like liked":"material-icons-outlined like"}
           onClick={(e) => {
             console.log(e);
             if (e.currentTarget.innerHTML == "favorite_border") {
