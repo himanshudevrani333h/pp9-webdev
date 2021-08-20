@@ -1,9 +1,20 @@
 
-export const incrementReducer  = (state = 0, action)=>{
-    if (action.type === "INCREMENT") {
-        state = state + 1;
-      }
+export const counterReducer = (state = 10, action) => {
+  if (action.type === "INCREMENT") {
+    state = state + action.payload;
+  } else if (action.type === "DECREMENT") {
+    state = state - 1;
+  }
 
-      return state;
-}
- 
+  return state;
+};
+
+export const authReducer = (state = false, action) => {
+  if (action.type === "LOGIN") {
+    state = true;
+  } else if (action.type === "LOGOUT") {
+    state = false;
+  }
+
+  return state;
+};
