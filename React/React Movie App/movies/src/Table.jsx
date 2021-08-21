@@ -75,8 +75,18 @@ class Table extends React.Component {
                   <td>
                      <i class="far fa-heart" onClick={(e)=>{
                      
-                        {e.currentTarget.classList.remove("far fa-heart")}
-                        e.currentTarget.classList.add("fas fa-heart")
+                        if(e.currentTarget.classList.contains("far") && e.currentTarget.classList.contains("fa-heart") ){
+                          e.currentTarget.classList.remove("far")
+                          e.currentTarget.classList.remove("fa-heart")
+                          e.currentTarget.classList.add("fas")
+                          e.currentTarget.classList.add("fa-heart")
+                        }else{
+                          e.currentTarget.classList.remove("fas")
+                          e.currentTarget.classList.remove("fa-heart")
+                          e.currentTarget.classList.add("far")
+                          e.currentTarget.classList.add("fa-heart")
+                        }
+                       
                        
                         // document.querySelector("i").classList.remove("fas fa-heart")
                         // document.querySelector("i").classList.add("far fa-heart")

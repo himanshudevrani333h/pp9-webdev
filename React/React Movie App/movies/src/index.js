@@ -9,41 +9,41 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MainPageNext from "./MainPageNext";
 import MainPageParams from "./MainPageParams";
 
-// ReactDOM.render(
-//   <Router>
-//     <Navbar />
-//     <Switch>
-//       <Route path="/customers">
-//         <Customer />
-//       </Route>
-
-//       <Route path="/rentals">
-//         <Rentals />
-//       </Route>
-
-//       <Route path="/login">
-//          <Login/>
-//         </Route>
-
-//         <Route path="/">
-//          <App/>
-//         </Route>
-
-//     </Switch>
-//   </Router>,
-//   document.getElementById("root")
-// );
-
 ReactDOM.render(
   <Router>
+    <Navbar />
     <Switch>
-      <Route path="/user/:id">
-        <MainPageNext />
+      <Route path="/customers">
+        <Customer />
       </Route>
-      <Route path="/">
-        <MainPageParams />
+
+      <Route path="/rentals">
+        <Rentals />
       </Route>
+
+      <Route path="/login">
+         <Login/>
+        </Route>
+
+        <Route path="/">
+         <App/>
+        </Route>
+
     </Switch>
   </Router>,
-  document.querySelector("#root")
+  document.getElementById("root")
 );
+
+// ReactDOM.render(
+//   <Router>
+//     <Switch>
+//       <Route path="/user/:id">
+//         <MainPageNext />
+//       </Route>
+//       <Route path="/">
+//         <MainPageParams />
+//       </Route>
+//     </Switch>
+//   </Router>,
+//   document.querySelector("#root")
+// );
