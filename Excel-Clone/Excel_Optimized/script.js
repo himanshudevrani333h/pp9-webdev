@@ -140,31 +140,42 @@ for (let i = 1; i <= 100; i++) {
   grid.append(row);
 }
 
-$(".cell").click(function (e) {
-  
-  //check kro koi old cell hai kya pehli se selected
-  if (oldCell) {
-    // agr han to use deselect kro class remove krke
-    oldCell.classList.remove("grid-selected-cell");
+grid.addEventListener("click", (e) => {
+  if (
+    e.target.classList != "blank-corner" &&
+    e.target.classList != "column-tags" &&
+    e.target.classList != "row-numbers"
+  ) {
+    //check kro koi old cell hai kya pehli se selected
+    if (oldCell) {
+      // agr han to use deselect kro class remove krke
+      oldCell.classList.remove("grid-selected-cell");
+    }
+    //jis cell pr click kra use select kro class add krke
+    e.target.classList.add("grid-selected-cell");
+
+    let cellAddress = e.target.getAttribute("data-address");
+
+    formulaSelectCell.value = cellAddress;
+
+    //and ab jo naya cell select hogya use save krdo old cell wali variable taki next time agr click ho kisi nye cell pr to ise deselect kr pai
+    oldCell = e.target;
   }
-  //jis cell pr click kra use select kro class add krke
-  e.currentTarget.classList.add("grid-selected-cell");
-
-  let cellAddress = e.currentTarget.getAttribute("data-address");
-
-  formulaSelectCell.value = cellAddress;
-
-  //and ab jo naya cell select hogya use save krdo old cell wali variable taki next time agr click ho kisi nye cell pr to ise deselect kr pai
-  oldCell = e.currentTarget;
 });
 
-$(".cell").on("input", function (e) {
-  
+grid.addEventListener("input", (e) => {
+  if (
+    e.target.classList == "blank-corner" &&
+    e.target.classList == "column-tags" &&
+    e.target.classList == "row-numbers"
+  )
+    return;
+
   // console.log(e.currentTarget.innerText);
-  let address = e.currentTarget.getAttribute("data-address");
+  let address = e.target.getAttribute("data-address");
   console.log(`upstream" ${dataObj[address].upstream}`);
   console.log(`downstream  ${dataObj[address].downstream}`);
-  dataObj[address].value = Number(e.currentTarget.innerText);
+  dataObj[address].value = Number(e.target.innerText);
 
   dataObj[address].formula = "";
 
