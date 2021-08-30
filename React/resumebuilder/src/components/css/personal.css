@@ -1,0 +1,25 @@
+.personal,.qual {
+    height: 92.3vh;
+    display: flex;
+  }
+
+  
+  .form-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .save-qual {
+    position: fixed;
+    bottom: 7rem;
+    left: 37.25rem;
+  }
+  
+  .gen-qual {
+    position: fixed;
+    bottom: 10rem;
+    left: 38.8rem;
+  }

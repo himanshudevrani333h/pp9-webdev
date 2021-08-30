@@ -142,9 +142,9 @@ for (let i = 1; i <= 100; i++) {
 
 grid.addEventListener("click", (e) => {
   if (
-    e.target.classList != "blank-corner" &&
-    e.target.classList != "column-tags" &&
-    e.target.classList != "row-numbers"
+    !e.target.classList.contains("blank-corner") &&
+    !e.target.classList.contains("column-tags") &&
+    !e.target.classList.contains("row-numbers")
   ) {
     //check kro koi old cell hai kya pehli se selected
     if (oldCell) {
@@ -165,9 +165,9 @@ grid.addEventListener("click", (e) => {
 
 grid.addEventListener("input", (e) => {
   if (
-    e.target.classList == "blank-corner" &&
-    e.target.classList == "column-tags" &&
-    e.target.classList == "row-numbers"
+    !e.target.classList.contains("blank-corner") &&
+    !e.target.classList.contains("column-tags") &&
+    !e.target.classList.contains("row-numbers")
   )
     return;
 
