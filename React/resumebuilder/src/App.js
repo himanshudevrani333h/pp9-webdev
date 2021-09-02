@@ -5,14 +5,16 @@ import SignUp from "./components/Signup";
 import Home from "./components/Home";
 import { useEffect } from "react";
 import { auth, firestore } from "./firebase";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { setUser } from "./redux/actions";
 import Personal from "./components/Personal";
 import Qualifications from "./components/qualifications";
 
 let App = () => {
   let dispatch = useDispatch();
-
+  let { fname, lname, city, state, email, phone } = useSelector(
+    (state) => state.details
+  );
   useEffect(() => {
     let unsub = auth.onAuthStateChanged(async (user) => {
       dispatch(setUser(user));

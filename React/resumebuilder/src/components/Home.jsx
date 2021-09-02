@@ -3,9 +3,10 @@ import { Redirect, useHistory } from "react-router-dom";
 import { auth } from "../firebase";
 import { setTemplate } from "../redux/actions";
 import "./css/home.css"
-
+import "./css/preview.css"
 let Home = () => {
   let user = useSelector((state) => state.user);
+
   let dispatch = useDispatch();
   let history = useHistory();
   return (
@@ -16,7 +17,7 @@ let Home = () => {
         <div
           className="template"
           onClick={() => {
-            dispatch(setTemplate("A"));
+            dispatch(setTemplate("A" ));
             history.push("/personal");
           }}
         >

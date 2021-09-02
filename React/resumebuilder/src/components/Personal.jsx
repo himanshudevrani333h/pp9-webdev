@@ -3,6 +3,7 @@ import "./css/personal.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setDetails } from "../redux/actions";
 import { useHistory } from "react-router-dom";
+
 let Personal = () => {
   let { fname, lname, city, state, email, phone } = useSelector(
     (state) => state.details
